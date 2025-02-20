@@ -4,7 +4,8 @@ layout: homepage
 
 ## About Me
 
-I am an Assistant Professor at Konkuk University, the Department of Computer and Engineering since 2025.
+I have been an Assistant Professor in the Department of Computer Engineering at Konkuk University since 2025.
+
 I received my bachelor's degree in 2020 and my Ph.D. in 2024, both from the Department of Electrical and Computer Engineering at Seoul National University.
 
 ## Research Interests
