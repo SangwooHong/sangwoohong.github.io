@@ -1,7 +1,7 @@
 main:
 
   - title: Constructing Fair Latent Space for Intersection of Fairness and Explainability
-    # authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
+    authors: Hyungjun Joo, Hyeonggeun Han, Sehwan Kim, <strong>Sangwoo Hong</strong>, Jungwoo Lee
     conference_short: AAAI
     conference: The Association for the Advancement of Artificial Intelligence <strong>(AAAI)</strong>, 2025.
     pdf: https://arxiv.org/abs/2412.17523.pdf
@@ -11,7 +11,7 @@ main:
     notes: Accepted for publications
 
   - title: "Mitigating Spurious Correlations via Disagreement Probability"
-    # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    # authors: Hyeonggeun Han, Sehwan Kim, Hyungjun Joo, <strong>Sangwoo Hong</strong>, Jungwoo Lee
     conference_short: NeurIPS
     conference: The Thirty-eighth Annual Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2024.
     pdf: https://proceedings.neurips.cc/paper_files/paper/2024/file/879c5890a9d2ecdcb590c9674cda4a59-Paper-Conference.pdf
@@ -22,7 +22,7 @@ main:
     image: ./assets/img/Neurips2024.JPG
 
   - title: "Learning Dual Hierarchical Representation for 3D Surface Reconstruction"
-    # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    authors: Jiyoon Shin, Youngwook Kim, <strong>Sangwoo Hong</strong>, Jungwoo Lee
     conference_short: ACCV
     conference: Asian Conference on Computer Vision <strong>(ACCV)</strong>, 2024.
     pdf: A.pdf
@@ -33,7 +33,7 @@ main:
     image: ./assets/img/ACCV2024.JPG
 
   - title: "Group‑wise Verifiable Coded Computing under Byzantine Attacks and Stragglers"
-    # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    authors: <strong>Sangwoo Hong</strong>, Heecheol Yang, Youngseok Yoon, Jungwoo Lee
     conference_short: TIFS
     conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2024.
     pdf: A.pdf
@@ -45,7 +45,7 @@ main:
 
 
   - title: "Straggler‑Exploiting Fully Private Distributed Matrix Multiplication With Chebyshev Polynomials"
-    # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    authors: <strong>Sangwoo Hong</strong>, Heecheol Yang, Youngseok Yoon, Jungwoo Lee
     conference_short: TCOM
     conference: IEEE Transactions on Communications <strong>(TCOM)</strong>, 2023.
     pdf: A.pdf
@@ -56,7 +56,7 @@ main:
     image: ./assets/img/TCOM2023.JPG
     
   - title: "Hierarchical Group Testing for Byzantine Attack Identification in Distributed Matrix Multiplication"
-    # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    authors: <strong>Sangwoo Hong</strong>, Heecheol Yang, Jungwoo Lee
     conference_short: JSAC
     conference: IEEE Journal on Selected Areas in Communications <strong>(JSAC)</strong>, 2022.
     pdf: A.pdf
@@ -67,7 +67,7 @@ main:
     image: ./assets/img/JSAC2022.JPG
   
   - title: "Chebyshev Polynomial Codes: Task Entanglement‑based Coding for Distributed Matrix Multiplication"
-    # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+    authors: <strong>Sangwoo Hong</strong>, Heecheol Yang, Youngseok Yoon, Taehyun Cho, Jungwoo Lee
     conference_short: ICML
     conference: Proceedings of the 38th International Conference on Machine Learning <strong>(ICML)</strong>, 2021.
     pdf: A.pdf
