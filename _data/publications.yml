@@ -14,7 +14,7 @@ main:
     # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
     conference_short: NeurIPS
     conference: The Thirty-eighth Annual Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2024.
-    pdf: https://arxiv.org/abs/2411.01757.pdf
+    pdf: https://proceedings.neurips.cc/paper_files/paper/2024/file/879c5890a9d2ecdcb590c9674cda4a59-Paper-Conference.pdf
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
