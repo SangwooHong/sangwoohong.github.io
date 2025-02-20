@@ -34,7 +34,7 @@ main:
     authors: Jiyoon Shin, Youngwook Kim, <strong>Sangwoo Hong</strong>, Jungwoo Lee
     conference_short: ACCV
     conference: Asian Conference on Computer Vision <strong>(ACCV)</strong>, 2024.
-    pdf: A.pdf
+    pdf: https://openaccess.thecvf.com/content/ACCV2024/papers/Shin_Learning_Dual_Hierarchical_Representation_for_3D_Surface_Reconstruction_ACCV_2024_paper.pdf
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
@@ -45,7 +45,7 @@ main:
     authors: <strong>Sangwoo Hong</strong>, Heecheol Yang, Youngseok Yoon, Jungwoo Lee
     conference_short: TIFS
     conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2024.
-    pdf: A.pdf
+    pdf: https://ieeexplore.ieee.org/iel7/10206/4358835/10473190.pdf
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
@@ -57,7 +57,7 @@ main:
     authors: <strong>Sangwoo Hong</strong>, Heecheol Yang, Youngseok Yoon, Jungwoo Lee
     conference_short: TCOM
     conference: IEEE Transactions on Communications <strong>(TCOM)</strong>, 2023.
-    pdf: A.pdf
+    pdf: https://ieeexplore.ieee.org/iel7/26/5497975/10015804.pdf
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
@@ -68,7 +68,7 @@ main:
     authors: <strong>Sangwoo Hong</strong>, Heecheol Yang, Jungwoo Lee
     conference_short: JSAC
     conference: IEEE Journal on Selected Areas in Communications <strong>(JSAC)</strong>, 2022.
-    pdf: A.pdf
+    pdf: https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9678333.pdf
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
@@ -79,7 +79,7 @@ main:
     authors: <strong>Sangwoo Hong</strong>, Heecheol Yang, Youngseok Yoon, Taehyun Cho, Jungwoo Lee
     conference_short: ICML
     conference: Proceedings of the 38th International Conference on Machine Learning <strong>(ICML)</strong>, 2021.
-    pdf: A.pdf
+    pdf: https://proceedings.mlr.press/v139/hong21b/hong21b.pdf
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
