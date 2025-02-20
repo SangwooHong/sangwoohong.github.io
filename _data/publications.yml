@@ -40,7 +40,7 @@ main:
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # notes: Oral Presentation
+    notes: Impact Factor 7.2
     image: ./assets/img/TIFS2024.JPG
 
 
@@ -52,7 +52,7 @@ main:
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # notes: Oral Presentation
+    notes: Impact Factor 8.3
     image: ./assets/img/TCOM2023.JPG
     
   - title: "Hierarchical Group Testing for Byzantine Attack Identification in Distributed Matrix Multiplication"
@@ -63,7 +63,7 @@ main:
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # notes: Oral Presentation
+    notes: Impact Factor 16.4
     image: ./assets/img/JSAC2022.JPG
   
   - title: "Chebyshev Polynomial Codes: Task Entanglement‑based Coding for Distributed Matrix Multiplication"
@@ -74,5 +74,5 @@ main:
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # notes: Oral Presentation
+    notes: Oral Presentation
     image: ./assets/img/ICML2021.JPG
