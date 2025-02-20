@@ -8,7 +8,18 @@ I am an Assistant Professor at Konkuk University, the Department of Computer and
 
 ## Research Interests
 
-- **Trustworthy AI:** Privacy, Fairness, Security, Reliability, Explainability  
+My Research interest lies in constructing **_Trustworthy AI_**, Focusing on key aspects such as
+
+- **Privacy**
+  - Data Privacy, Privacy-preserving Machine Learning
+- **Security**
+  - Verifiable Computing, Finding and Mitigating Adversarial Attacks
+- **Fairness**
+  - Max-Min Fairness, Counterfactual Fairness
+- **Reliability**
+  - Reliable Distributed Computing
+- **Explainability**
+  - Explainable AI
 
 ## News
 
