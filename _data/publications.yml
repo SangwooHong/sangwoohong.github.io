@@ -21,8 +21,6 @@ main:
     # notes: Oral Presentation
     image: ./assets/img/Neurips2024.JPG
 
-
-
   - title: "Learning Dual Hierarchical Representation for 3D Surface Reconstruction"
     # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
     conference_short: ACCV
@@ -32,20 +30,7 @@ main:
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
-    image: ./assets/img/Neurips2024.JPG
-
-
-  - title: "Group‑wise Verifiable Coded Computing under Byzantine Attacks and Stragglers"
-    # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: TIFS
-    conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2024.
-    pdf: A.pdf
-    # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
-    # page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    # notes: Oral Presentation
-    image: ./assets/img/Neurips2024.JPG
-
+    image: ./assets/img/ACCV2024.JPG
 
   - title: "Group‑wise Verifiable Coded Computing under Byzantine Attacks and Stragglers"
     # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
@@ -56,7 +41,7 @@ main:
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
-    image: ./assets/img/Neurips2024.JPG
+    image: ./assets/img/TIFS2024.JPG
 
 
   - title: "Straggler‑Exploiting Fully Private Distributed Matrix Multiplication With Chebyshev Polynomials"
@@ -68,9 +53,7 @@ main:
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
-    image: ./assets/img/Neurips2024.JPG
-
-
+    image: ./assets/img/TCOM2023.JPG
     
   - title: "Hierarchical Group Testing for Byzantine Attack Identification in Distributed Matrix Multiplication"
     # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
@@ -81,7 +64,7 @@ main:
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
-    image: ./assets/img/Neurips2024.JPG
+    image: ./assets/img/JSAC2022.JPG
   
   - title: "Chebyshev Polynomial Codes: Task Entanglement‑based Coding for Distributed Matrix Multiplication"
     # authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
@@ -92,4 +75,4 @@ main:
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
     # notes: Oral Presentation
-    image: ./assets/img/Neurips2024.JPG
+    image: ./assets/img/ICML2021.JPG
