@@ -12,7 +12,7 @@ I received my bachelor's degree in 2020 and my Ph.D. in 2024, both from the Depa
 My Research interest lies in constructing **_Trustworthy AI_**, Focusing on key aspects such as
 
 - <h3>Privacy<h3>
-  - Data Privacy, Privacy-preserving Machine Learning
+  - <h1>Data Privacy, Privacy-preserving Machine Learning<h1>
 - **Security**
   - Verifiable Computing, Finding and Mitigating Adversarial Attacks
 - **Fairness**
