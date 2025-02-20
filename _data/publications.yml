@@ -20,7 +20,7 @@ main:
     notes: Accepted for publications
 
   - title: "Mitigating Spurious Correlations via Disagreement Probability"
-    # authors: Hyeonggeun Han, Sehwan Kim, Hyungjun Joo, <strong>Sangwoo Hong</strong>, Jungwoo Lee
+    authors: Hyeonggeun Han, Sehwan Kim, Hyungjun Joo, <strong>Sangwoo Hong</strong>, Jungwoo Lee
     conference_short: NeurIPS
     conference: The Thirty-eighth Annual Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2024.
     pdf: https://proceedings.neurips.cc/paper_files/paper/2024/file/879c5890a9d2ecdcb590c9674cda4a59-Paper-Conference.pdf
@@ -49,7 +49,7 @@ main:
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Impact Factor 7.2
+    notes: Impact Factor: 7.2
     image: ./assets/img/TIFS2024.JPG
 
 
@@ -61,7 +61,7 @@ main:
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Impact Factor 8.3
+    notes: Impact Factor: 8.3
     image: ./assets/img/TCOM2023.JPG
     
   - title: "Hierarchical Group Testing for Byzantine Attack Identification in Distributed Matrix Multiplication"
@@ -72,7 +72,7 @@ main:
     # code: https://github.com/yaoyao-liu/c/lass-incremental-learning/tree/main/mnemonics-training
     # page: https://class-il.mpi-inf.mpg.de/mnemonics/
     # bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Impact Factor 16.4
+    notes: Impact Factor: 16.4
     image: ./assets/img/JSAC2022.JPG
   
   - title: "Chebyshev Polynomial Codes: Task Entanglement‑based Coding for Distributed Matrix Multiplication"
