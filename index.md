@@ -5,14 +5,13 @@ layout: homepage
 ## About Me
 
 I am an Assistant Professor at Konkuk University, the Department of Computer and Engineering since 2025.
-
 I received my bachelor's degree in 2020 and my Ph.D. in 2024, both from the Department of Electrical and Computer Engineering at Seoul National University.
 
 ## Research Interests
 
 My Research interest lies in constructing **_Trustworthy AI_**, Focusing on key aspects such as
 
-- **Privacy**
+- <h1>**Privacy**<h1>
   - Data Privacy, Privacy-preserving Machine Learning
 - **Security**
   - Verifiable Computing, Finding and Mitigating Adversarial Attacks
