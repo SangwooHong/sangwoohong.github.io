@@ -1,4 +1,14 @@
 main:
+  - title: Mix from Failure: Confusion-Pairing Mixup for Long-Tailed Recognition
+    authors: Youngseok Yoon, <strong>Sangwoo Hong</strong>, Hyungjoon Joo, Yao Qin, Haewon Jeong, Jungwoo Lee
+    conference_short: arxiv
+    # conference: The Association for the Advancement of Artificial Intelligence <strong>(AAAI)</strong>, 2025.
+    pdf: https://arxiv.org/abs/2411.07621.pdf
+    # code: https://github.com/MrGiovanni/ContinualLearning
+    # bibtex: https://bib.yliu.me/MICCAI23.txt
+    image: ./assets/img/arxiv2025.JPG
+    notes: preprints
+
 
   - title: Constructing Fair Latent Space for Intersection of Fairness and Explainability
     authors: Hyungjun Joo, Hyeonggeun Han, Sehwan Kim, <strong>Sangwoo Hong</strong>, Jungwoo Lee
