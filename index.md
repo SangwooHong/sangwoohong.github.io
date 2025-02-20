@@ -9,7 +9,7 @@ I received my bachelor's degree in 2020 and my Ph.D. in 2024, both from the Depa
 
 ## Research Interests
 
-My Research interest lies in constructing **_Trustworthy AI_**, Focusing on key aspects such as
+My Research interest lies in constructing **_Trustworthy AI_**, focusing on key aspects such as
 
 - **Privacy**
   - Data Privacy, Privacy-preserving Machine Learning
