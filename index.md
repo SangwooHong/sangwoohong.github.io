@@ -4,19 +4,18 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I am an Assistant Professor at Konkuk University, the Department of Computer and Engineering.
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Trustworthy AI:** Privacy, Fairness, Security, Reliability, Explainability  
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Feb. 2025]** Our paper about Explainable AI has been accepted to AAAI 2025.
+- **[Dec. 2024]** Our paper about Fair AI has been accepted to NeurIPS 2024.
+- **[Dec. 2024]** Our paper about 3D Surface Reconstruction has been accepted to ACCV 2024.
+- **[Mar. 2024]** Our paper about Defending Adversarial Attack has been accepted to TIFS 2024.
 
 {% include_relative _includes/publications.md %}
 
