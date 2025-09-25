@@ -1,5 +1,13 @@
 main:
 
+  - title: "Adjusting Initial Noise to Mitigate Memorization in Text-to-Image Diffusion Models"
+    authors: Hyeonggeun Han*, Sehwan Kim*, Hyungjun Joo, <strong>Sangwoo Hong<strong>, Jungwoo Lee
+    conference_short: NeurIPS
+    conference:  The Thirty-ninth Annual Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2025.
+    pdf: https://arxiv.org/abs/2411.07621.pdf
+    image: ./assets/img/arxiv2026.JPG
+    # notes: Preprints
+
   - title: "Mix from Failure: Confusion-Pairing Mixup for Long-Tailed Recognition"
     authors: Youngseok Yoon, <strong>Sangwoo Hong</strong>, Hyungjoon Joo, Yao Qin, Haewon Jeong, Jungwoo Lee
     conference_short: Arxiv
