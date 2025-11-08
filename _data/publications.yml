@@ -13,7 +13,7 @@ main:
     conference: Arxiv, 2025.
     pdf: https://arxiv.org/abs/2511.01608.pdf
     image: ./assets/img/arxiv2027.png
-    # notes: Preprints
+    notes: Preprints
 
     # notes: Preprints
 
