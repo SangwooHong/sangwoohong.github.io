@@ -1,5 +1,22 @@
 main:
 
+  - title: "An Adaptive Sampling Framework for Diffusion-based Dataset Distillation with High Fidelity and Diversity"
+    authors: Sunbeom Jeong, <strong>Sangwoo Hong</strong>, Sehwan Kim, Hyeonggeun Han, Hyungjun Joo, Jungwoo Lee
+    conference_short: AAAI
+    conference: 40th Annual AAAI Conference on Artificial Intelligence  <strong>(AAAI)</strong>, 2026. <strong>(Oral Presentation)</strong>.
+    pdf: https://arxiv.org/abs/2411.07621.pdf
+    image: ./assets/img/AAAI2026.png
+
+  - title: "Operator-aware shadow importance sampling for accurate fidelity estimation"
+    authors: Hyunho Cha, <strong>Sangwoo Hong</strong>, Jungwoo Lee
+    conference_short: Arxiv
+    conference: Arxiv, 2025.
+    pdf: https://arxiv.org/abs/2511.01608.pdf
+    image: ./assets/img/arxiv2027.png
+    # notes: Preprints
+
+    # notes: Preprints
+
   - title: "Adjusting Initial Noise to Mitigate Memorization in Text-to-Image Diffusion Models"
     authors: Hyeonggeun Han*, Sehwan Kim*, Hyungjun Joo, <strong>Sangwoo Hong</strong>, Jungwoo Lee
     conference_short: NeurIPS
