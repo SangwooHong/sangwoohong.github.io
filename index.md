@@ -25,6 +25,7 @@ My Research interest lies in constructing **_Trustworthy AI_**, focusing on key 
 
 ## News
 
+- **[Nov. 2025]** Our paper about Reliable Data generation in Generative AI has been accepted to AAAI 2026. (Oral Presentation)
 - **[Sep. 2025]** Our paper about Enhancing Data Privacy in Generative AI has been accepted to NeurIPS 2025.
 - **[Aug. 2025]** Our team has been selected to lead the 'Coded Parallel Tensor Network Contraction for Robust and Efficient Quantum Circuit Simulation' project, as part of the Grant for Outstanding Early-Career Researchers. 
 - **[Aug. 2025]** Our team at Konkuk University has been selected for the Research Group Fostering Program.
