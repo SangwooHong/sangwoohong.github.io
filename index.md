@@ -25,6 +25,11 @@ My Research interest lies in constructing **_Trustworthy AI_**, focusing on key 
 
 ## News
 
+- **[Feb. 2025]** Our paper about Efficient VLA Pretraining has been released on arXiv.
+- **[Jan. 2026]** Prof. Hong delivered an invited talk on XAI at the Sejong University.
+- **[Jan. 2026]** Our Lab introduce a GPU server equipped with 2 X NVIDIA RTX Pro 6000 GPU. (198GB VRAM)
+- **[Jan. 2026]** Prof. Hong delivered an invited talk on generative AI and privacy at the National Institute for Mathematical Sciences.
+- **[Nov. 2025]** Our Lab have established a partnership with Theta Labs by signing an MOU.
 - **[Nov. 2025]** Our paper about Reliable Data generation in Generative AI has been accepted to AAAI 2026. **(Oral Presentation)**
 - **[Sep. 2025]** Our paper about Enhancing Data Privacy in Generative AI has been accepted to NeurIPS 2025.
 - **[Aug. 2025]** Our team has been selected to lead the 'Coded Parallel Tensor Network Contraction for Robust and Efficient Quantum Circuit Simulation' project, as part of the Grant for Outstanding Early-Career Researchers. 
