@@ -5,7 +5,7 @@ main:
     conference_short: Arxiv
     conference: Arxiv, 2026.
     pdf: https://www.arxiv.org/pdf/2602.03668
-    image: ./assets/img/arxiv2026.png
+    image: ./assets/img/arxiv2026_2.png
     notes: Preprints
 
   
@@ -13,7 +13,7 @@ main:
     authors: Sunbeom Jeong, <strong>Sangwoo Hong</strong>, Sehwan Kim, Hyeonggeun Han, Hyungjun Joo, Jungwoo Lee
     conference_short: AAAI
     conference: 40th Annual AAAI Conference on Artificial Intelligence  <strong>(AAAI)</strong>, 2026.
-    pdf: https://arxiv.org/abs/2411.07621.pdf
+    pdf: https://github.com/sb3991/adaptive-diffusion-dd
     image: ./assets/img/AAAI2026.png
     notes: Oral Presentation
 
