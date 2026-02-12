@@ -1,5 +1,14 @@
 main:
 
+  - title: "MVP-LAM: Learning Action-Centric Latent Action via Cross-Viewpoint Reconstruction"
+    authors: Jung Min Lee, Dohyeok Lee, Seokhun Ju, Taehyun Cho, Jinwoo Koo, Li Zhao, Sangwoo Hong, Jungwoo Lee
+    conference_short: Arxiv
+    conference: Arxiv, 2026.
+    pdf: https://www.arxiv.org/pdf/2602.03668
+    image: ./assets/img/arxiv2026.png
+    notes: Preprints
+
+  
   - title: "An Adaptive Sampling Framework for Diffusion-based Dataset Distillation with High Fidelity and Diversity"
     authors: Sunbeom Jeong, <strong>Sangwoo Hong</strong>, Sehwan Kim, Hyeonggeun Han, Hyungjun Joo, Jungwoo Lee
     conference_short: AAAI
