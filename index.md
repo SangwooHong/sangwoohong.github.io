@@ -24,8 +24,13 @@ My Research interest lies in constructing **_Trustworthy AI_**, focusing on key 
   - Explainable AI
 
 ## News
-
-- **[Feb. 2025]** Our paper about Efficient VLA Pretraining has been released on arXiv.
+- **[April. 2026]** Prof. Hong will serve as an Area Chair (AC) for NeurIPS 2026.
+- **[April. 2026]** Our paper about Efficient Large Language Model has been accepted to ACL 2026.
+- **[April. 2026]** Our paper about Fair and Efficient Model has been accepted to IEEE Transactions on Image Processing.
+- **[Mar. 2026]** Our team has been selected to lead the 'Verifiable Privacy-Preserving Machine Unlearning' project. 
+- **[Mar. 2026]** Our paper about Efficient Fidelity Estimation for Quantum State has been accepted to Phyiscal Review A.
+- **[Mar. 2026]** Our paper about Communication using AI has been accepted to IEEE Wireless Communication Letters.
+- **[Feb. 2026]** Our paper about Efficient VLA Pretraining has been released on arXiv.
 - **[Jan. 2026]** Prof. Hong delivered an invited talk on XAI at the Sejong University.
 - **[Jan. 2026]** Our Lab introduce a GPU server equipped with 2 X NVIDIA RTX Pro 6000 GPU. (198GB VRAM)
 - **[Jan. 2026]** Prof. Hong delivered an invited talk on generative AI and privacy at the National Institute for Mathematical Sciences.
