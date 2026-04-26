@@ -1,5 +1,30 @@
 main:
 
+  - title: "Efficient Process Reward Modeling via Contrastive Mutual Information"
+    authors: Nakyung Lee, Sangwoo Hong, Jungwoo Lee
+    conference_short: ACL
+    conference: The 64th Annual Meeting of the Association for Computational Linguistics (Main paper), 2026
+    pdf: https://www.arxiv.org/pdf/2602.03668
+    image: ./assets/img/ACL.png
+    # notes: Preprints
+
+  - title: "Bias Alleviation through Network Pruning for Sparse and Debiased Models"
+    authors: Sangwoo Hong, Sehwan Kim, Hyungjun Joo, Hyeonggeun Han, Jiyoon Shin, Yoav Wald, and Jungwoo Lee
+    conference_short: TIP
+    conference: IEEE Transactions on Image Processing, 2026
+    pdf: https://www.arxiv.org/pdf/2602.03668
+    image: ./assets/img/TIP.png
+    # notes: Preprints
+
+  - title: "Beyond Prompts: Preserving Semantics in Diffusion-based Communication"
+    authors: Wonjung Kim, Nakyung Lee, Sangwoo Hong*, Jungwoo Lee
+    conference_short: WCL
+    conference: IEEE Wireless Communications Letters, 2026.
+    pdf: https://ieeexplore.ieee.org/document/11432887
+    image: ./assets/img/WCL.png
+    notes: Preprints
+
+
   - title: "MVP-LAM: Learning Action-Centric Latent Action via Cross-Viewpoint Reconstruction"
     authors: Jung Min Lee, Dohyeok Lee, Seokhun Ju, Taehyun Cho, Jinwoo Koo, Li Zhao, Sangwoo Hong, Jungwoo Lee
     conference_short: Arxiv
@@ -19,11 +44,11 @@ main:
 
   - title: "Operator-aware shadow importance sampling for accurate fidelity estimation"
     authors: Hyunho Cha, <strong>Sangwoo Hong</strong>, Jungwoo Lee
-    conference_short: Arxiv
-    conference: Arxiv, 2025.
+    conference_short: PRA
+    conference: Physical Review A, 2026
     pdf: https://arxiv.org/abs/2511.01608.pdf
     image: ./assets/img/arxiv2027.png
-    notes: Preprints
+    # notes: Preprints
 
     # notes: Preprints
 
@@ -44,7 +69,7 @@ main:
     notes: Preprints
 
 
-  - title: Constructing Fair Latent Space for Intersection of Fairness and Explainability
+  - title: "Constructing Fair Latent Space for Intersection of Fairness and Explainability"
     authors: Hyungjun Joo, Hyeonggeun Han, Sehwan Kim, <strong>Sangwoo Hong</strong>, Jungwoo Lee
     conference_short: AAAI
     conference: The Association for the Advancement of Artificial Intelligence <strong>(AAAI)</strong>, 2025.
