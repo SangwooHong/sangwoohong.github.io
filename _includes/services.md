@@ -3,6 +3,7 @@
 <h4 style="margin:0 10px 0;">Area Chair (AC) and Program Committee (PC)</h4>
 
 <ul style="margin:0 0 5px;">
+  <li><a href="https://2026.aclweb.org/"><autocolor>The 64th Annual Meeting of the Association for Computational Linguistics (ACL), Session Chair </autocolor></a></li>
   <li><a href="https://neurips.cc/"><autocolor>Conference on Neural Information Processing Systems (NeurIPS), AC </autocolor></a></li>
   <li><a href="https://aaai.org/conference/aaai/"><autocolor>Conference on Artificial Intelligence (AAAI), PC </autocolor></a></li>
 </ul>
