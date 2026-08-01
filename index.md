@@ -24,6 +24,13 @@ My Research interest lies in constructing **_Trustworthy AI_**, focusing on key 
   - Explainable AI
 
 ## News
+- **[July. 2026]** Our team has been selected for the “AI Star Fellowship 2026” in collaboration with Jeju National University, NC AI, AIVIS, and Metsakuur. Prof. Hong will serve as the PI of Project 2, focusing on proactive security against multi-unit deepfakes and secure authentication of AI agents. (Six-year project with total funding of KRW 11.0 billion)
+- **[July. 2026]** Our team has been selected to lead a KETI-funded project with access to a cluster of eight NVIDIA B200 GPUs (1,536 GB total VRAM).
+- **[June. 2026]** Our team at Konkuk University has been selected for the Group Research Workforce Development Program.
+- **[May. 2026]** Our paper on Efficient Large Language Models has been accepted to IEEE Transactions on Circuits and Systems II: Express Briefs.
+- **[May. 2026]** Our paper on Efficient VLA Pretraining has been accepted to ICML 2026.
+- **[May. 2026]** Our team has been selected to lead the “Global Talent Development in Copyright Technology” project, supported by the Ministry of Culture, Sports and Tourism (MCST) and the Korea Creative Content Agency (KOCCA).
+- **[April. 2026]** Our team has been selected to lead the “Advanced Industry Talent Training Bootcamp” project, supported by the Korea Institute for Advancement of Technology (KIAT).
 - **[April. 2026]** Prof. Hong will serve as an Area Chair (AC) for NeurIPS 2026.
 - **[April. 2026]** Our paper about Efficient Large Language Model has been accepted to ACL 2026.
 - **[April. 2026]** Our paper about Fair and Efficient Model has been accepted to IEEE Transactions on Image Processing.
