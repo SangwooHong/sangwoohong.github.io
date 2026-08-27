@@ -1,0 +1,28 @@
+---
+import { navItems, site } from "../data/site";
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">TML</div>
+      <p>{site.fullName}</p>
+      <p>{site.university}</p>
+    </div>
+    <div>
+      <h2>Navigate</h2>
+      <div class="footer-links">
+        {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+      </div>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+      <p>{site.location}</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© {year} {site.fullName}</span>
+  </div>
+</footer>

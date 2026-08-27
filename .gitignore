@@ -5,3 +5,9 @@ Gemfile.lock
 .DS_Store
 .jekyll-cache
 git-update.sh
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example

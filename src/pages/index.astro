@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import JoinBanner from "../components/JoinBanner.astro";
+import NewsList from "../components/NewsList.astro";
+import PublicationEntry from "../components/PublicationEntry.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import { publications } from "../data/publications";
+import { projects } from "../data/projects";
+---
+
+<BaseLayout>
+  <Hero />
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Featured Research"
+        title="Reliability Across The AI Stack"
+        description="Selected directions from TML's current research portfolio."
+      />
+      <div class="feature-grid">
+        {publications.filter((pub) => pub.featured).slice(0, 3).map((publication) => (
+          <PublicationEntry publication={publication} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section muted">
+    <div class="container two-column">
+      <div>
+        <SectionTitle eyebrow="Latest News" title="Recent Updates" />
+        <NewsList limit={5} />
+      </div>
+      <aside class="glance">
+        <p class="eyebrow">TML at a Glance</p>
+        <div class="stat"><strong>{publications.length}</strong><span>publications listed</span></div>
+        <div class="stat"><strong>{projects.length}</strong><span>active project records</span></div>
+        <div class="stat"><strong>4</strong><span>stack-wide research themes</span></div>
+        <div class="stat"><strong>1536 GB</strong><span>B200 GPU cluster access</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <JoinBanner />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,25 @@
+---
+interface Props {
+  person: {
+    name: string;
+    role: string;
+    affiliation?: string;
+    interests?: string;
+    email?: string;
+    image?: string;
+  };
+}
+const person = Astro.props.person;
+const initials = person.name.split(" ").map((part) => part[0]).join("").slice(0, 2);
+---
+
+<article class="person-card">
+  {person.image ? <img src={person.image} alt={`${person.name} portrait`} loading="lazy" /> : <div class="initials">{initials}</div>}
+  <div>
+    <h3>{person.name}</h3>
+    <p class="role">{person.role}</p>
+    {person.affiliation && <p>{person.affiliation}</p>}
+    {person.interests && <p>{person.interests}</p>}
+    {person.email && <a href={`mailto:${person.email}`}>{person.email}</a>}
+  </div>
+</article>

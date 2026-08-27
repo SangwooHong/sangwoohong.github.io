@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PersonCard from "../../components/PersonCard.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import { people } from "../../data/people";
+---
+
+<BaseLayout title="People">
+  <section class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">People</p>
+      <h1>Members of TML</h1>
+      <p>Researchers working on trustworthy machine learning at Konkuk University.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container people-sections">
+      <SectionTitle title="Principal Investigator" />
+      <div class="person-grid">{people.pi.map((person) => <PersonCard person={person} />)}</div>
+
+      <SectionTitle title="Graduate Researchers" />
+      <div class="person-grid">{people.graduate.map((person) => <PersonCard person={person} />)}</div>
+
+      <SectionTitle title="Undergraduate Researchers" />
+      <div class="person-grid">{people.undergraduate.map((person) => <PersonCard person={person} />)}</div>
+
+      <SectionTitle title="Alumni" />
+      <div class="person-grid">{people.alumni.map((person) => <PersonCard person={person} />)}</div>
+    </div>
+  </section>
+</BaseLayout>

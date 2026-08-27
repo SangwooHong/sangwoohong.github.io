@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ResearchStackFigure from "../../components/ResearchStackFigure.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import { crossCutting, researchAreas } from "../../data/research";
+---
+
+<BaseLayout title="Research">
+  <section class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">Research</p>
+      <h1>Reliable AI from foundations to deployment.</h1>
+      <p>
+        TML organizes research around three stack layers and one cross-cutting
+        algorithmic pillar for safe, private, robust, aligned, and explainable AI.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <ResearchStackFigure />
+    </div>
+  </section>
+
+  <section class="section muted">
+    <div class="container">
+      <SectionTitle title="Research Areas" />
+      <div class="area-grid">
+        {researchAreas.map((area) => (
+          <article class="area-card">
+            <h2>{area.title}</h2>
+            <p>{area.summary}</p>
+            <ul>
+              {area.topics.map((topic) => <li>{topic}</li>)}
+            </ul>
+          </article>
+        ))}
+        <article class="area-card cross">
+          <h2>{crossCutting.title}</h2>
+          <p>{crossCutting.summary}</p>
+          <ul>
+            {crossCutting.topics.map((topic) => <li>{topic}</li>)}
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

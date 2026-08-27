@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PublicationEntry from "../../components/PublicationEntry.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import { publications } from "../../data/publications";
+
+const years = [...new Set(publications.map((pub) => pub.year))].sort((a, b) => b - a);
+const topics = [...new Set(publications.map((pub) => pub.topic))].sort();
+---
+
+<BaseLayout title="Publications">
+  <section class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">Publications</p>
+      <h1>Publication Archive</h1>
+      <p>Selected and recent papers from TML and Prof. Sangwoo Hong.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle title="Topics" description="Topic labels are editable in the publication data file." />
+      <div class="tag-row large">
+        {topics.map((topic) => <span>{topic}</span>)}
+      </div>
+      <div class="year-list">
+        {years.map((year) => (
+          <section class="year-section">
+            <h2>{year}</h2>
+            <div class="publication-list">
+              {publications.filter((pub) => pub.year === year).map((publication) => (
+                <PublicationEntry publication={publication} />
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

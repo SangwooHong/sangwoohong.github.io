@@ -1,0 +1,71 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import { site } from "../../data/site";
+---
+
+<BaseLayout title="About">
+  <section class="page-hero about-hero">
+    <div class="container about-grid">
+      <img src="/assets/img/SangwooHong.jpg" alt="Sangwoo Hong" />
+      <div>
+        <p class="eyebrow">Principal Investigator</p>
+        <h1>Sangwoo Hong</h1>
+        <p>
+          Assistant Professor in the Department of Computer Engineering at
+          Konkuk University.
+        </p>
+        <div class="entry-links">
+          <a href={`mailto:${site.email}`}>Email</a>
+          <a href={site.googleScholar}>Google Scholar</a>
+          <a href={site.linkedin}>LinkedIn</a>
+          <a href={site.cv}>CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split-content">
+      <div>
+        <SectionTitle title="Biography" />
+        <p>
+          Sangwoo Hong has been an Assistant Professor in the Department of
+          Computer Engineering at Konkuk University since 2025.
+        </p>
+        <p>
+          He received his bachelor's degree in 2020 and his Ph.D. in 2024, both
+          from the Department of Electrical and Computer Engineering at Seoul
+          National University.
+        </p>
+      </div>
+      <div class="info-panel">
+        <h2>Research Interests</h2>
+        <ul>
+          <li>Privacy: data privacy and privacy-preserving generative models</li>
+          <li>Security: verifiable computing and adversarial robustness</li>
+          <li>Fairness: max-min fairness and counterfactual fairness</li>
+          <li>Reliability: distributed computing and network pruning</li>
+          <li>Explainability: explainable AI</li>
+        </ul>
+      </div>
+      <div class="info-panel">
+        <h2>Service</h2>
+        <ul>
+          <li>ACL 2026, Session Chair</li>
+          <li>NeurIPS, Area Chair</li>
+          <li>AAAI, Program Committee</li>
+          <li>Reviewer for NeurIPS, CVPR, ICCV, ECCV, and ISIT</li>
+          <li>Reviewer for TNNLS, TIFS, and TCOM</li>
+        </ul>
+      </div>
+      <div>
+        <SectionTitle title="Previous Homepage Content" />
+        <p>
+          PI-centered content from the previous personal homepage has been moved
+          here so the main site can focus on TML as a research lab.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

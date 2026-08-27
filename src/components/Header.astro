@@ -1,0 +1,21 @@
+---
+import { navItems, site } from "../data/site";
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="TML home">
+      <span class="brand-mark">TML</span>
+      <span class="brand-text">
+        <strong>{site.fullName}</strong>
+        <span>{site.university}</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      {navItems.map((item) => (
+        <a class:list={[{ active: currentPath === item.href }, "nav-link"]} href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>

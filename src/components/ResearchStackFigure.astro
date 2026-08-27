@@ -1,0 +1,24 @@
+---
+import { crossCutting, researchAreas } from "../data/research";
+---
+
+<div class="stack-figure" aria-label="TML research stack">
+  <div class="stack-layers">
+    {[...researchAreas].reverse().map((area) => (
+      <section class="stack-layer">
+        <div>
+          <h3>{area.title}</h3>
+          <p>{area.summary}</p>
+        </div>
+        <ul>
+          {area.topics.map((topic) => <li>{topic}</li>)}
+        </ul>
+      </section>
+    ))}
+  </div>
+  <aside class="cross-pillar">
+    <span>Cross-cutting algorithms</span>
+    <h3>{crossCutting.title}</h3>
+    <p>{crossCutting.topics.join(" / ")}</p>
+  </aside>
+</div>

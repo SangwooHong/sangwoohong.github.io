@@ -1,0 +1,19 @@
+---
+import ResearchStackFigure from "./ResearchStackFigure.astro";
+import { site } from "../data/site";
+---
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Konkuk University</p>
+      <h1>{site.fullName}</h1>
+      <p class="hero-lede">{site.tagline}</p>
+      <div class="hero-actions">
+        <a class="button primary" href="/research/">Research</a>
+        <a class="button secondary" href="/join/">Join TML</a>
+      </div>
+    </div>
+    <ResearchStackFigure />
+  </div>
+</section>

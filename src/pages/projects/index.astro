@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import { projects } from "../../data/projects";
+---
+
+<BaseLayout title="Projects">
+  <section class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">Projects</p>
+      <h1>Research Programs</h1>
+      <p>Funded and ongoing projects that support TML's research agenda.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle title="Ongoing Projects" />
+      <div class="project-grid">
+        {projects.filter((project) => project.status === "Ongoing").map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

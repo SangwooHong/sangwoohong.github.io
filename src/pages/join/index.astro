@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionTitle from "../../components/SectionTitle.astro";
+import { site } from "../../data/site";
+---
+
+<BaseLayout title="Join">
+  <section class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">Join TML</p>
+      <h1>Students interested in trustworthy AI are welcome to contact us.</h1>
+      <p>
+        TML looks for students who enjoy rigorous research, careful engineering,
+        and problems that connect AI reliability with real systems.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split-content">
+      <div>
+        <SectionTitle title="Open Positions" />
+        <p>
+          Graduate and undergraduate research opportunities may be available in
+          reliable computing, foundation models, physical-world AI, and reliable
+          and safe AI algorithms.
+        </p>
+        <p class="manual-note">
+          Manual review needed: replace this section with the lab's current
+          application policy, deadlines, and program-specific requirements.
+        </p>
+      </div>
+      <div class="info-panel">
+        <h2>What We Look For</h2>
+        <ul>
+          <li>Strong interest in trustworthy machine learning</li>
+          <li>Careful reading and writing habits</li>
+          <li>Solid programming and experimental discipline</li>
+          <li>Willingness to work across theory, systems, and applications</li>
+        </ul>
+      </div>
+      <div class="info-panel">
+        <h2>Research Areas</h2>
+        <ul>
+          <li>Reliable computing and verifiable computation</li>
+          <li>LLMs, generative AI, and multimodal models</li>
+          <li>Autonomous driving, VLA, and embodied AI</li>
+          <li>Unlearning, privacy, robustness, alignment, and explainability</li>
+        </ul>
+      </div>
+      <div>
+        <SectionTitle title="How To Apply" />
+        <p>
+          Send a concise email describing your background, research interests,
+          and relevant projects or papers.
+        </p>
+        <a class="button primary" href={`mailto:${site.email}`}>Contact {site.email}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

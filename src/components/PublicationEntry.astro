@@ -1,0 +1,35 @@
+---
+interface Props {
+  publication: {
+    title: string;
+    authors: string;
+    venue: string;
+    year: number;
+    topic: string;
+    venueShort: string;
+    pdf?: string;
+    image?: string;
+    note?: string;
+    featured?: boolean;
+  };
+}
+const publication = Astro.props.publication;
+---
+
+<article class="publication-entry">
+  {publication.image && <img src={publication.image} alt="" loading="lazy" />}
+  <div>
+    <div class="publication-meta">
+      <span>{publication.venueShort}</span>
+      <span>{publication.topic}</span>
+      {publication.featured && <span>Selected</span>}
+    </div>
+    <h3>{publication.title}</h3>
+    <p class="authors">{publication.authors}</p>
+    <p>{publication.venue}, {publication.year}</p>
+    <div class="entry-links">
+      {publication.pdf && <a href={publication.pdf}>Paper</a>}
+      {publication.note && <span>{publication.note}</span>}
+    </div>
+  </div>
+</article>
