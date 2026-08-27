@@ -6,6 +6,7 @@ interface Props {
     affiliation?: string;
     interests?: string;
     email?: string;
+    github?: string;
     image?: string;
   };
 }
@@ -20,6 +21,9 @@ const initials = person.name.split(" ").map((part) => part[0]).join("").slice(0,
     <p class="role">{person.role}</p>
     {person.affiliation && <p>{person.affiliation}</p>}
     {person.interests && <p>{person.interests}</p>}
-    {person.email && <a href={`mailto:${person.email}`}>{person.email}</a>}
+    <div class="entry-links compact">
+      {person.email && <a href={`mailto:${person.email}`}>Email</a>}
+      {person.github && <a href={person.github}>GitHub</a>}
+    </div>
   </div>
 </article>
