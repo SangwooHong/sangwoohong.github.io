@@ -1,25 +1,19 @@
 ---
 const layers = [
   {
-    number: "03",
-    title: "Reliable Computing",
-    label: "Infrastructure",
-    topics: ["Efficient", "Distributed", "Verifiable", "Quantum"],
-    tone: "computing"
-  },
-  {
-    number: "02",
-    title: "Foundation Models",
-    label: "Models",
-    topics: ["LLMs", "Generative AI", "Multimodal", "Aligned AI"],
-    tone: "models"
-  },
-  {
-    number: "01",
     title: "Physical World",
     label: "Deployment",
-    topics: ["Autonomous Driving", "VLA Models", "Embodied AI", "Robotics"],
-    tone: "physical"
+    topics: ["Autonomous Driving", "VLA", "Embodied AI", "Robotics"]
+  },
+  {
+    title: "Foundation Models",
+    label: "Models",
+    topics: ["LLMs", "Generative AI", "Multimodal Models"]
+  },
+  {
+    title: "Reliable Computing",
+    label: "Computing Foundation",
+    topics: ["Efficient Computing", "Distributed Computing", "Verifiable Computing", "Quantum / Next-Gen Computing"]
   }
 ];
 
@@ -29,15 +23,17 @@ const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explain
 <figure class="stack-figure" aria-labelledby="research-stack-title">
   <div class="stack-diagram">
     <figcaption class="stack-heading">
-      <span class="eyebrow">Research Stack</span>
-      <strong id="research-stack-title">Three layers + cross-layer algorithms</strong>
+      <div>
+        <span class="eyebrow">Research Framework</span>
+        <strong id="research-stack-title">Reliability across the AI stack</strong>
+      </div>
+      <p>Three system levels, connected by one cross-layer algorithmic pillar.</p>
     </figcaption>
 
     <div class="stack-body">
-      <div class="stack-layers" aria-label="Three research layers">
+      <div class="stack-layers" aria-label="Research stack from deployment to computing foundation">
         {layers.map((layer) => (
-          <section class={`stack-layer ${layer.tone}`}>
-            <div class="layer-number" aria-hidden="true">{layer.number}</div>
+          <section class="stack-layer">
             <div class="layer-copy">
               <span>{layer.label}</span>
               <h2>{layer.title}</h2>
@@ -57,8 +53,9 @@ const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explain
 
       <section class="algorithm-layer">
         <div class="algorithm-copy">
-          <span>Cross-Layer Algorithms</span>
+          <span>Cross-Layer Pillar</span>
           <h2>Reliable &amp; Safe AI Algorithms</h2>
+          <p>Applies across all three levels</p>
         </div>
         <ul>
           {algorithms.map((topic) => <li>{topic}</li>)}

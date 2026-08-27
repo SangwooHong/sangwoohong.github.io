@@ -1,22 +1,16 @@
 ---
+import { formatProjectDuration, type ProjectWithStatus } from "../data/projects";
+
 interface Props {
-  project: {
-    title: string;
-    status: string;
-    agency: string;
-    duration: string;
-    themes: string[];
-    description: string;
-    originalTitle?: string;
-  };
+  project: ProjectWithStatus;
 }
 const project = Astro.props.project;
 ---
 
 <article class="project-card">
   <div class="project-topline">
-    <span>{project.status}</span>
-    <span>{project.duration}</span>
+    <span class:list={["project-status", project.status.toLowerCase()]}>{project.status}</span>
+    <span>{formatProjectDuration(project)}</span>
   </div>
   <h3>{project.title}</h3>
   {project.originalTitle && <p class="original-title">{project.originalTitle}</p>}

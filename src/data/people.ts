@@ -4,7 +4,7 @@ export const people = {
       name: "Sangwoo Hong",
       role: "Principal Investigator / Assistant Professor",
       affiliation: "Department of Computer Science and Engineering, Konkuk University",
-      interests: "Privacy-preserving generative models, fair decision-making models, explainable AI",
+      interests: "Reliable and trustworthy AI spanning computing systems, foundation models, and real-world applications.",
       email: "swhong06@konkuk.ac.kr",
       image: "/assets/img/SangwooHong.jpg"
     }

@@ -1,16 +1,24 @@
 ---
 import { news } from "../data/news";
+
 interface Props {
   limit?: number;
 }
-const items = Astro.props.limit ? news.slice(0, Astro.props.limit) : news;
+
+const sortedNews = [...news].sort((a, b) => b.date.localeCompare(a.date));
+const items = Astro.props.limit ? sortedNews.slice(0, Astro.props.limit) : sortedNews;
+const hasMore = Boolean(Astro.props.limit && sortedNews.length > items.length);
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric", timeZone: "UTC" })
+    .format(new Date(value + "-01T00:00:00Z"));
 ---
 
 <div class="news-list">
   {items.map((item) => (
     <article class="news-item">
-      <time>{item.date}</time>
+      <time datetime={item.date}>{formatDate(item.date)}</time>
       <p>{item.text}</p>
     </article>
   ))}
 </div>
+{hasMore && <a class="news-more" href="/news/">View all news</a>}

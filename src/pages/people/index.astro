@@ -19,10 +19,10 @@ import { people } from "../../data/people";
       <SectionTitle title="Principal Investigator" />
       <div class="person-grid">{people.pi.map((person) => <PersonCard person={person} />)}</div>
 
-      <SectionTitle title="Incoming Students" />
+      <SectionTitle title="Graduate Researchers" />
       <div class="person-grid">{people.graduate.map((person) => <PersonCard person={person} />)}</div>
 
-      <SectionTitle title="Interns" />
+      <SectionTitle title="Undergraduate Researchers" />
       <div class="person-grid">{people.undergraduate.map((person) => <PersonCard person={person} />)}</div>
 
       {people.alumni.length > 0 && (

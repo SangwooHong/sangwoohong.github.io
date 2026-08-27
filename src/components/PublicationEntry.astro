@@ -1,23 +1,14 @@
 ---
+import type { Publication } from "../data/publications";
+
 interface Props {
-  publication: {
-    title: string;
-    authors: string;
-    venue: string;
-    year: number;
-    topic: string;
-    venueShort: string;
-    pdf?: string;
-    image?: string;
-    note?: string;
-    featured?: boolean;
-  };
+  publication: Publication;
 }
 const publication = Astro.props.publication;
 ---
 
 <article class="publication-entry">
-  {publication.image && <img src={publication.image} alt="" loading="lazy" />}
+  <img src={publication.image} alt={`Teaser figure for ${publication.title}`} loading="lazy" />
   <div>
     <div class="publication-meta">
       <span>{publication.venueShort}</span>
@@ -28,7 +19,9 @@ const publication = Astro.props.publication;
     <p class="authors">{publication.authors}</p>
     <p>{publication.venue}, {publication.year}</p>
     <div class="entry-links">
-      {publication.pdf && <a href={publication.pdf}>Paper</a>}
+      {publication.links?.paper && <a href={publication.links.paper}>Paper</a>}
+      {publication.links?.code && <a href={publication.links.code}>Code</a>}
+      {publication.links?.project && <a href={publication.links.project}>Project</a>}
       {publication.note && <span>{publication.note}</span>}
     </div>
   </div>

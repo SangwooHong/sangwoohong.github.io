@@ -2,40 +2,9 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ResearchStackFigure from "../../components/ResearchStackFigure.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
+import RepresentativePaper from "../../components/RepresentativePaper.astro";
 import { crossCutting, researchAreas } from "../../data/research";
-import { publications } from "../../data/publications";
-
-const representativeTitles: Record<string, string[]> = {
-  "Reliable Computing": [
-    "PredLM: A Sparse Large Language Model Decoding Accelerator with Hardware-Efficient Zero-Activation Prediction",
-    "Group-wise Verifiable Coded Computing under Byzantine Attacks and Stragglers",
-    "Operator-aware shadow importance sampling for accurate fidelity estimation"
-  ],
-  "Foundation Models": [
-    "Efficient Process Reward Modeling via Contrastive Mutual Information",
-    "Function-Level Execution Feedback for Code Preference Optimization",
-    "An Adaptive Sampling Framework for Diffusion-based Dataset Distillation with High Fidelity and Diversity"
-  ],
-  "Physical World": [
-    "MVP-LAM: Learning Action-Centric Latent Action via Cross-Viewpoint Reconstruction",
-    "Geometry-Preserving Robust Neural Reconstruction via Statistical Reweighting",
-    "Learning Dual Hierarchical Representation for 3D Surface Reconstruction"
-  ],
-  "Reliable & Safe AI Algorithms": [
-    "Bias Alleviation through Network Pruning for Sparse and Debiased Models",
-    "Adjusting Initial Noise to Mitigate Memorization in Text-to-Image Diffusion Models",
-    "Mitigating Spurious Correlations via Disagreement Probability"
-  ]
-};
-
-type Publication = (typeof publications)[number];
-
-const isPublication = (publication: Publication | undefined): publication is Publication => Boolean(publication);
-
-const getRepresentativePublications = (title: string) =>
-  representativeTitles[title]
-    .map((publicationTitle) => publications.find((publication) => publication.title === publicationTitle))
-    .filter(isPublication);
+import { getRepresentativePublications } from "../../data/publications";
 ---
 
 <BaseLayout title="Research">
@@ -44,8 +13,9 @@ const getRepresentativePublications = (title: string) =>
       <p class="eyebrow">Research</p>
       <h1>Reliable AI from foundations to deployment.</h1>
       <p>
-        TML organizes research around three stack layers and one cross-cutting
-        algorithmic pillar for safe, private, robust, aligned, and explainable AI.
+        TML studies reliability from computational foundations, through foundation
+        models, to AI systems operating in the physical world. Reliable and safe
+        algorithms connect all three levels.
       </p>
     </div>
   </section>
@@ -70,10 +40,7 @@ const getRepresentativePublications = (title: string) =>
             <div class="representative-papers">
               <h3>Representative Papers</h3>
               {getRepresentativePublications(area.title).map((publication) => (
-                <a href={publication.pdf || "/publications/"} class="paper-link">
-                  <span>{publication.venueShort} {publication.year}</span>
-                  <strong>{publication.title}</strong>
-                </a>
+                <RepresentativePaper publication={publication} />
               ))}
             </div>
           </article>
@@ -87,10 +54,7 @@ const getRepresentativePublications = (title: string) =>
           <div class="representative-papers">
             <h3>Representative Papers</h3>
             {getRepresentativePublications(crossCutting.title).map((publication) => (
-              <a href={publication.pdf || "/publications/"} class="paper-link">
-                <span>{publication.venueShort} {publication.year}</span>
-                <strong>{publication.title}</strong>
-              </a>
+              <RepresentativePaper publication={publication} />
             ))}
           </div>
         </article>

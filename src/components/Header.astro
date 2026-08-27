@@ -3,7 +3,7 @@ import { navItems, site } from "../data/site";
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="site-header">
+<header class="site-header" data-site-header>
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="TML home">
       <span class="brand-mark">TML</span>
@@ -12,10 +12,63 @@ const currentPath = Astro.url.pathname;
         <span>{site.university}</span>
       </span>
     </a>
-    <nav class="nav" aria-label="Primary navigation">
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+      aria-label="Open navigation"
+      data-nav-toggle
+    >
+      <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+
+    <nav class="nav" id="primary-navigation" aria-label="Primary navigation" data-nav data-open="false">
       {navItems.map((item) => (
         <a class:list={[{ active: currentPath === item.href }, "nav-link"]} href={item.href}>{item.label}</a>
       ))}
     </nav>
   </div>
 </header>
+
+<script>
+  const desktopMenu = window.matchMedia("(min-width: 921px)");
+
+  document.querySelectorAll<HTMLElement>("[data-site-header]").forEach((header) => {
+    const toggle = header.querySelector<HTMLButtonElement>("[data-nav-toggle]");
+    const nav = header.querySelector<HTMLElement>("[data-nav]");
+
+    if (!toggle || !nav) return;
+
+    const closeMenu = (returnFocus = false) => {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open navigation");
+      nav.dataset.open = "false";
+      if (returnFocus) toggle.focus();
+    };
+
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+      nav.dataset.open = String(!isOpen);
+    });
+
+    nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => closeMenu()));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.dataset.open === "true") closeMenu(true);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (nav.dataset.open === "true" && event.target instanceof Node && !header.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    desktopMenu.addEventListener("change", (event) => {
+      if (event.matches) closeMenu();
+    });
+  });
+</script>

@@ -2,7 +2,14 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
-import { projects } from "../../data/projects";
+import { getProjectsWithStatus, type ProjectStatus } from "../../data/projects";
+
+const projects = getProjectsWithStatus();
+const groups: { status: ProjectStatus; title: string; description: string }[] = [
+  { status: "Ongoing", title: "Ongoing Projects", description: "Research programs currently active." },
+  { status: "Upcoming", title: "Upcoming Projects", description: "Confirmed programs with a future start date." },
+  { status: "Completed", title: "Completed Projects", description: "Past research programs and support." }
+];
 ---
 
 <BaseLayout title="Projects">
@@ -10,16 +17,23 @@ import { projects } from "../../data/projects";
     <div class="container narrow">
       <p class="eyebrow">Projects</p>
       <h1>Research Programs</h1>
-      <p>Funded and ongoing projects that support TML's research agenda.</p>
+      <p>Funded programs and research infrastructure supporting TML's research agenda.</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <SectionTitle title="Ongoing Projects" />
-      <div class="project-grid">
-        {projects.filter((project) => project.status === "Ongoing").map((project) => <ProjectCard project={project} />)}
-      </div>
+    <div class="container project-sections">
+      {groups.map((group) => {
+        const items = projects.filter((project) => project.status === group.status);
+        return items.length > 0 && (
+          <section class="project-section">
+            <SectionTitle title={group.title} description={group.description} />
+            <div class="project-grid">
+              {items.map((project) => <ProjectCard project={project} />)}
+            </div>
+          </section>
+        );
+      })}
     </div>
   </section>
 </BaseLayout>

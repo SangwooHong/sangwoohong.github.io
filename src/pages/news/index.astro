@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NewsList from "../../components/NewsList.astro";
+---
+
+<BaseLayout title="News">
+  <section class="page-hero">
+    <div class="container narrow">
+      <p class="eyebrow">News</p>
+      <h1>Lab Updates</h1>
+      <p>Research, publication, project, and community updates from TML.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <NewsList />
+    </div>
+  </section>
+</BaseLayout>

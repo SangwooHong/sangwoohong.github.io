@@ -5,8 +5,12 @@ import JoinBanner from "../components/JoinBanner.astro";
 import NewsList from "../components/NewsList.astro";
 import PublicationEntry from "../components/PublicationEntry.astro";
 import SectionTitle from "../components/SectionTitle.astro";
-import { publications } from "../data/publications";
-import { projects } from "../data/projects";
+import { people } from "../data/people";
+import { featuredPublications, publications } from "../data/publications";
+import { getProjectsWithStatus } from "../data/projects";
+
+const members = [...people.pi, ...people.graduate, ...people.undergraduate, ...people.alumni];
+const activeProjects = getProjectsWithStatus().filter((project) => project.status === "Ongoing");
 ---
 
 <BaseLayout>
@@ -17,10 +21,10 @@ import { projects } from "../data/projects";
       <SectionTitle
         eyebrow="Featured Research"
         title="Reliability Across The AI Stack"
-        description="Selected directions from TML's current research portfolio."
+        description="Representative work across foundation models, reliable and safe algorithms, and physical-world AI."
       />
       <div class="feature-grid">
-        {publications.filter((pub) => pub.featured).slice(0, 3).map((publication) => (
+        {featuredPublications.slice(0, 3).map((publication) => (
           <PublicationEntry publication={publication} />
         ))}
       </div>
@@ -35,10 +39,10 @@ import { projects } from "../data/projects";
       </div>
       <aside class="glance">
         <p class="eyebrow">TML at a Glance</p>
-        <div class="stat"><strong>{publications.length}</strong><span>publications listed</span></div>
-        <div class="stat"><strong>{projects.length}</strong><span>active project records</span></div>
-        <div class="stat"><strong>4</strong><span>stack-wide research themes</span></div>
-        <div class="stat"><strong>1536 GB</strong><span>B200 GPU cluster access</span></div>
+        <div class="stat"><strong>{members.length}</strong><span>Members</span></div>
+        <div class="stat"><strong>{publications.length}</strong><span>Publications</span></div>
+        <div class="stat"><strong>{activeProjects.length}</strong><span>Active Projects</span></div>
+        <div class="stat"><strong>8 x NVIDIA B200</strong><span>Research Computing</span></div>
       </aside>
     </div>
   </section>

@@ -19,7 +19,7 @@ const topics = [...new Set(publications.map((pub) => pub.topic))].sort();
 
   <section class="section">
     <div class="container">
-      <SectionTitle title="Topics" description="Topic labels are editable in the publication data file." />
+      <SectionTitle title="Research Topics" description="Publications organized across TML's research framework." />
       <div class="tag-row large">
         {topics.map((topic) => <span>{topic}</span>)}
       </div>
