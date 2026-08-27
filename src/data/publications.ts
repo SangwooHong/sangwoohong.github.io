@@ -1,5 +1,32 @@
 export const publications = [
   {
+    title: "Function-Level Execution Feedback for Code Preference Optimization",
+    authors: "Idris Nechnech, Sehwan Kim, Jimin Seo, Yeongoon Kim, Minhae Oh, Sangwoo Hong, Jungwoo Lee",
+    venue: "Findings of the Association for Computational Linguistics: EMNLP",
+    year: 2026,
+    topic: "Foundation Models",
+    venueShort: "EMNLP Findings",
+    image: "/assets/img/arxiv2026.png"
+  },
+  {
+    title: "Geometry-Preserving Robust Neural Reconstruction via Statistical Reweighting",
+    authors: "Jiyoon Shin, Sangwoo Hong",
+    venue: "British Machine Vision Conference",
+    year: 2026,
+    topic: "Physical World",
+    venueShort: "BMVC",
+    image: "/assets/img/ACCV2024.JPG"
+  },
+  {
+    title: "PredLM: A Sparse Large Language Model Decoding Accelerator with Hardware-Efficient Zero-Activation Prediction",
+    authors: "Seunghyun Moon, Seowon Ji, Sangwoo Hong, Eunji Kwon",
+    venue: "IEEE Transactions on Circuits and Systems II: Express Briefs",
+    year: 2026,
+    topic: "Reliable Computing",
+    venueShort: "TCAS-II",
+    image: "/assets/img/arxiv2026.png"
+  },
+  {
     title: "Efficient Process Reward Modeling via Contrastive Mutual Information",
     authors: "Nakyung Lee, Sangwoo Hong, Jungwoo Lee",
     venue: "The 64th Annual Meeting of the Association for Computational Linguistics (Main paper)",
@@ -86,6 +113,15 @@ export const publications = [
     note: "Preprint"
   },
   {
+    title: "Prototype-based Explanation for Semantic Gap Reduction with Distributional Embedding",
+    authors: "Hyungjun Joo, Sangwoo Hong, Hyeonggeun Han, Youngseok Yoon, Jungwoo Lee",
+    venue: "IEEE Access",
+    year: 2025,
+    topic: "Reliable and Safe AI Algorithms",
+    venueShort: "IEEE Access",
+    image: "/assets/img/AAAI2025.JPG"
+  },
+  {
     title: "Constructing Fair Latent Space for Intersection of Fairness and Explainability",
     authors: "Hyungjun Joo, Hyeonggeun Han, Sehwan Kim, Sangwoo Hong, Jungwoo Lee",
     venue: "The Association for the Advancement of Artificial Intelligence",
@@ -104,6 +140,15 @@ export const publications = [
     venueShort: "NeurIPS",
     pdf: "https://proceedings.neurips.cc/paper_files/paper/2024/file/879c5890a9d2ecdcb590c9674cda4a59-Paper-Conference.pdf",
     image: "/assets/img/Neurips2024.JPG"
+  },
+  {
+    title: "Nerflex: Flexible Neural Radiance Fields with Diffeomorphic Deformation",
+    authors: "Jiyoon Shin, Sangwoo Hong, Jungwoo Lee",
+    venue: "IEEE Access",
+    year: 2024,
+    topic: "Physical World",
+    venueShort: "IEEE Access",
+    image: "/assets/img/ACCV2024.JPG"
   },
   {
     title: "Learning Dual Hierarchical Representation for 3D Surface Reconstruction",
@@ -125,6 +170,15 @@ export const publications = [
     pdf: "https://ieeexplore.ieee.org/iel7/10206/4358835/10473190.pdf",
     image: "/assets/img/TIFS2024.JPG",
     note: "Impact Factor: 7.2"
+  },
+  {
+    title: "Gbmix: Enhancing fairness by group-balanced mixup",
+    authors: "Sangwoo Hong, Youngseok Yoon, Hyungjun Joo, Jungwoo Lee",
+    venue: "IEEE Access",
+    year: 2024,
+    topic: "Reliable and Safe AI Algorithms",
+    venueShort: "IEEE Access",
+    image: "/assets/img/Neurips2024.JPG"
   },
   {
     title: "Straggler-Exploiting Fully Private Distributed Matrix Multiplication With Chebyshev Polynomials",
@@ -149,6 +203,15 @@ export const publications = [
     note: "Impact Factor: 16.4"
   },
   {
+    title: "Securely Straggler-Exploiting Coded Computation for Distributed Matrix Multiplication",
+    authors: "Heecheol Yang, Sangwoo Hong, Jungwoo Lee",
+    venue: "IEEE Access",
+    year: 2021,
+    topic: "Reliable Computing",
+    venueShort: "IEEE Access",
+    image: "/assets/img/JSAC2022.JPG"
+  },
+  {
     title: "Chebyshev Polynomial Codes: Task Entanglement-based Coding for Distributed Matrix Multiplication",
     authors: "Sangwoo Hong, Heecheol Yang, Youngseok Yoon, Taehyun Cho, Jungwoo Lee",
     venue: "Proceedings of the 38th International Conference on Machine Learning",
@@ -158,5 +221,14 @@ export const publications = [
     pdf: "https://proceedings.mlr.press/v139/hong21b/hong21b.pdf",
     image: "/assets/img/ICML2021.JPG",
     note: "Oral Presentation"
+  },
+  {
+    title: "Squeezed polynomial codes: Communication-efficient coded computation in straggler-exploiting distributed matrix multiplication",
+    authors: "Sangwoo Hong, Heecheol Yang, Jungwoo Lee",
+    venue: "IEEE Access",
+    year: 2020,
+    topic: "Reliable Computing",
+    venueShort: "IEEE Access",
+    image: "/assets/img/ICML2021.JPG"
   }
 ];

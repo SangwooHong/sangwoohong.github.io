@@ -460,8 +460,13 @@ h3 {
 
 .authors,
 .agency,
-.role {
+.role,
+.original-title {
   font-weight: 650;
+}
+
+.original-title {
+  color: var(--ink);
 }
 
 .entry-links a {

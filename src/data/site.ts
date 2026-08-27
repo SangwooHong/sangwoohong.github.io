@@ -4,7 +4,9 @@ export const site = {
   university: "Konkuk University",
   pi: "Sangwoo Hong",
   email: "swhong06@konkuk.ac.kr",
-  location: "Department of Computer Engineering, Konkuk University",
+  location: "Department of Computer Science and Engineering, Konkuk University",
+  office: "Engineering Building A, Room 1513",
+  studentLab: "New Engineering Building, Room 1206",
   tagline: "Building reliable AI from computing foundations to the physical world.",
   description:
     "TML studies reliability across the AI stack, from computational foundations to foundation models and real-world AI systems.",
