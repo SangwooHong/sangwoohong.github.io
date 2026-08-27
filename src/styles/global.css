@@ -490,9 +490,9 @@ h3 {
 .person-card img,
 .initials {
   width: 132px;
-  height: 164px;
+  height: 132px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   border: 1px solid var(--line);
   background: var(--green-soft);
 }
@@ -624,8 +624,8 @@ h3 {
   .initials {
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1;
     object-fit: cover;
-    object-position: center top;
+    object-position: center center;
   }
 }
