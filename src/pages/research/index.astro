@@ -3,6 +3,39 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import ResearchStackFigure from "../../components/ResearchStackFigure.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
 import { crossCutting, researchAreas } from "../../data/research";
+import { publications } from "../../data/publications";
+
+const representativeTitles: Record<string, string[]> = {
+  "Reliable Computing": [
+    "PredLM: A Sparse Large Language Model Decoding Accelerator with Hardware-Efficient Zero-Activation Prediction",
+    "Group-wise Verifiable Coded Computing under Byzantine Attacks and Stragglers",
+    "Operator-aware shadow importance sampling for accurate fidelity estimation"
+  ],
+  "Foundation Models": [
+    "Efficient Process Reward Modeling via Contrastive Mutual Information",
+    "Function-Level Execution Feedback for Code Preference Optimization",
+    "An Adaptive Sampling Framework for Diffusion-based Dataset Distillation with High Fidelity and Diversity"
+  ],
+  "Physical World": [
+    "MVP-LAM: Learning Action-Centric Latent Action via Cross-Viewpoint Reconstruction",
+    "Geometry-Preserving Robust Neural Reconstruction via Statistical Reweighting",
+    "Learning Dual Hierarchical Representation for 3D Surface Reconstruction"
+  ],
+  "Reliable & Safe AI Algorithms": [
+    "Bias Alleviation through Network Pruning for Sparse and Debiased Models",
+    "Adjusting Initial Noise to Mitigate Memorization in Text-to-Image Diffusion Models",
+    "Mitigating Spurious Correlations via Disagreement Probability"
+  ]
+};
+
+type Publication = (typeof publications)[number];
+
+const isPublication = (publication: Publication | undefined): publication is Publication => Boolean(publication);
+
+const getRepresentativePublications = (title: string) =>
+  representativeTitles[title]
+    .map((publicationTitle) => publications.find((publication) => publication.title === publicationTitle))
+    .filter(isPublication);
 ---
 
 <BaseLayout title="Research">
@@ -28,20 +61,38 @@ import { crossCutting, researchAreas } from "../../data/research";
       <SectionTitle title="Research Areas" />
       <div class="area-grid">
         {researchAreas.map((area) => (
-          <article class="area-card">
+          <article class="area-card research-area-card">
             <h2>{area.title}</h2>
             <p>{area.summary}</p>
-            <ul>
+            <ul class="topic-list">
               {area.topics.map((topic) => <li>{topic}</li>)}
             </ul>
+            <div class="representative-papers">
+              <h3>Representative Papers</h3>
+              {getRepresentativePublications(area.title).map((publication) => (
+                <a href={publication.pdf || "/publications/"} class="paper-link">
+                  <span>{publication.venueShort} {publication.year}</span>
+                  <strong>{publication.title}</strong>
+                </a>
+              ))}
+            </div>
           </article>
         ))}
-        <article class="area-card cross">
+        <article class="area-card cross research-area-card">
           <h2>{crossCutting.title}</h2>
           <p>{crossCutting.summary}</p>
-          <ul>
+          <ul class="topic-list">
             {crossCutting.topics.map((topic) => <li>{topic}</li>)}
           </ul>
+          <div class="representative-papers">
+            <h3>Representative Papers</h3>
+            {getRepresentativePublications(crossCutting.title).map((publication) => (
+              <a href={publication.pdf || "/publications/"} class="paper-link">
+                <span>{publication.venueShort} {publication.year}</span>
+                <strong>{publication.title}</strong>
+              </a>
+            ))}
+          </div>
         </article>
       </div>
     </div>
