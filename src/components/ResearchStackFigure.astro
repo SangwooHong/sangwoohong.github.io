@@ -4,23 +4,20 @@ const layers = [
     number: "03",
     title: "Reliable Computing",
     label: "Infrastructure",
-    summary: "Efficient, distributed, verifiable, and quantum computing foundations.",
-    topics: ["Efficient Computing", "Distributed Computing", "Verifiable Computing", "Quantum Computing"],
+    topics: ["Efficient", "Distributed", "Verifiable", "Quantum"],
     tone: "computing"
   },
   {
     number: "02",
     title: "Foundation Models",
     label: "Models",
-    summary: "Reliable learning and inference for LLMs, generative AI, and multimodal systems.",
-    topics: ["LLMs", "Generative AI", "Multimodal Models", "Aligned AI"],
+    topics: ["LLMs", "Generative AI", "Multimodal", "Aligned AI"],
     tone: "models"
   },
   {
     number: "01",
     title: "Physical World",
     label: "Deployment",
-    summary: "Trustworthy intelligence for autonomous, embodied, and robotic systems.",
     topics: ["Autonomous Driving", "VLA Models", "Embodied AI", "Robotics"],
     tone: "physical"
   }
@@ -33,7 +30,7 @@ const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explain
   <div class="stack-diagram">
     <figcaption class="stack-heading">
       <span class="eyebrow">Research Stack</span>
-      <strong id="research-stack-title">Three layers connected by reliable AI algorithms</strong>
+      <strong id="research-stack-title">Three layers + cross-layer algorithms</strong>
     </figcaption>
 
     <div class="stack-body">
@@ -44,7 +41,6 @@ const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explain
             <div class="layer-copy">
               <span>{layer.label}</span>
               <h2>{layer.title}</h2>
-              <p>{layer.summary}</p>
             </div>
             <ul class="layer-topics">
               {layer.topics.map((topic) => <li>{topic}</li>)}
@@ -53,15 +49,16 @@ const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explain
         ))}
       </div>
 
+      <div class="stack-connectors" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <section class="algorithm-layer">
-        <div class="algorithm-spine" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
         <div class="algorithm-copy">
-          <span>Algorithm Layer</span>
-          <h2>Reliable &amp; Safe AI</h2>
+          <span>Cross-Layer Algorithms</span>
+          <h2>Reliable &amp; Safe AI Algorithms</h2>
         </div>
         <ul>
           {algorithms.map((topic) => <li>{topic}</li>)}
