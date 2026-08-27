@@ -465,12 +465,6 @@ h3 {
   background: var(--green-soft);
 }
 
-.person-card img.member-photo {
-  padding: 16px;
-  object-fit: cover;
-  background: white;
-}
-
 .initials {
   display: grid;
   place-items: center;
@@ -607,9 +601,4 @@ h3 {
     aspect-ratio: 1;
     object-fit: cover;
     object-position: center center;
-  }
-
-  .person-card img.member-photo {
-    padding: 18px;
-  }
-}
+  }}

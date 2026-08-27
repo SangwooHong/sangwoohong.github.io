@@ -15,7 +15,7 @@ const initials = person.name.split(" ").map((part) => part[0]).join("").slice(0,
 ---
 
 <article class="person-card">
-  {person.image ? <img class={person.image.includes("/assets/img/people/") ? "member-photo" : undefined} src={person.image} alt={`${person.name} portrait`} loading="lazy" /> : <div class="initials">{initials}</div>}
+  {person.image ? <img src={person.image} alt={`${person.name} portrait`} loading="lazy" /> : <div class="initials">{initials}</div>}
   <div>
     <h3>{person.name}</h3>
     <p class="role">{person.role}</p>
