@@ -413,7 +413,7 @@ h3 {
 
 .publication-entry {
   display: grid;
-  grid-template-columns: minmax(112px, 140px) minmax(0, 1fr);
+  grid-template-columns: 184px minmax(0, 1fr);
   gap: 20px;
   align-items: start;
   padding: 18px;
@@ -422,10 +422,9 @@ h3 {
 
 .publication-entry img {
   display: block;
-  width: 100%;
-  max-width: 140px;
-  height: auto;
-  aspect-ratio: 16 / 10;
+  width: 184px;
+  height: 104px;
+  max-width: none;
   object-fit: contain;
   background: var(--paper-soft);
   border: 1px solid var(--line);
@@ -637,7 +636,8 @@ h3 {
   }
 
   .publication-entry img {
-    aspect-ratio: 16 / 9;
+    height: clamp(116px, 48vw, 210px);
+    aspect-ratio: auto;
     object-fit: contain;
     object-position: center center;
   }

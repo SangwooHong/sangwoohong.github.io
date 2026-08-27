@@ -6,7 +6,7 @@ export const publications = [
     year: 2026,
     topic: "Foundation Models",
     venueShort: "EMNLP Findings",
-    image: "/assets/img/arxiv2026.png"
+    image: "/assets/img/publications/function-level-execution-feedback.png"
   },
   {
     title: "Geometry-Preserving Robust Neural Reconstruction via Statistical Reweighting",
@@ -15,7 +15,7 @@ export const publications = [
     year: 2026,
     topic: "Physical World",
     venueShort: "BMVC",
-    image: "/assets/img/ACCV2024.JPG"
+    image: "/assets/img/publications/geometry-preserving-robust-neural-reconstruction.png"
   },
   {
     title: "PredLM: A Sparse Large Language Model Decoding Accelerator with Hardware-Efficient Zero-Activation Prediction",
@@ -24,7 +24,7 @@ export const publications = [
     year: 2026,
     topic: "Reliable Computing",
     venueShort: "TCAS-II",
-    image: "/assets/img/arxiv2026.png"
+    image: "/assets/img/publications/predlm-sparse-llm-decoding-accelerator.png"
   },
   {
     title: "Efficient Process Reward Modeling via Contrastive Mutual Information",
@@ -34,7 +34,7 @@ export const publications = [
     topic: "Foundation Models",
     venueShort: "ACL",
     pdf: "https://www.arxiv.org/pdf/2602.03668",
-    image: "/assets/img/ACL.png",
+    image: "/assets/img/publications/efficient-process-reward-modeling.png",
     featured: true
   },
   {
@@ -45,7 +45,7 @@ export const publications = [
     topic: "Reliable and Safe AI Algorithms",
     venueShort: "TIP",
     pdf: "https://www.arxiv.org/pdf/2602.03668",
-    image: "/assets/img/TIP.png",
+    image: "/assets/img/publications/bias-alleviation-network-pruning.png",
     featured: true
   },
   {
@@ -56,7 +56,7 @@ export const publications = [
     topic: "Foundation Models",
     venueShort: "WCL",
     pdf: "https://ieeexplore.ieee.org/document/11432887",
-    image: "/assets/img/WCL.png",
+    image: "/assets/img/publications/beyond-prompts-diffusion-communication.png",
     note: "Preprint"
   },
   {
@@ -67,7 +67,7 @@ export const publications = [
     topic: "Physical World",
     venueShort: "ICML",
     pdf: "https://www.arxiv.org/pdf/2602.03668",
-    image: "/assets/img/arxiv2026_2.png",
+    image: "/assets/img/publications/mvp-lam-action-centric-latent-action.png",
     featured: true
   },
   {
@@ -78,7 +78,7 @@ export const publications = [
     topic: "Foundation Models",
     venueShort: "AAAI",
     pdf: "https://github.com/sb3991/adaptive-diffusion-dd",
-    image: "/assets/img/AAAI2026.png",
+    image: "/assets/img/publications/adaptive-sampling-dataset-distillation.png",
     note: "Oral Presentation"
   },
   {
@@ -89,7 +89,7 @@ export const publications = [
     topic: "Reliable Computing",
     venueShort: "PRA",
     pdf: "https://arxiv.org/abs/2511.01608.pdf",
-    image: "/assets/img/arxiv2027.png"
+    image: "/assets/img/publications/operator-aware-shadow-importance-sampling.png"
   },
   {
     title: "Adjusting Initial Noise to Mitigate Memorization in Text-to-Image Diffusion Models",
@@ -99,7 +99,7 @@ export const publications = [
     topic: "Reliable and Safe AI Algorithms",
     venueShort: "NeurIPS",
     pdf: "https://arxiv.org/abs/2510.08625.pdf",
-    image: "/assets/img/arxiv2026.png"
+    image: "/assets/img/publications/adjusting-initial-noise-memorization.png"
   },
   {
     title: "Mix from Failure: Confusion-Pairing Mixup for Long-Tailed Recognition",
@@ -109,7 +109,7 @@ export const publications = [
     topic: "Reliable and Safe AI Algorithms",
     venueShort: "arXiv",
     pdf: "https://arxiv.org/abs/2411.07621.pdf",
-    image: "/assets/img/arxiv2025.JPG",
+    image: "/assets/img/publications/mix-from-failure.png",
     note: "Preprint"
   },
   {
@@ -119,7 +119,7 @@ export const publications = [
     year: 2025,
     topic: "Reliable and Safe AI Algorithms",
     venueShort: "IEEE Access",
-    image: "/assets/img/AAAI2025.JPG"
+    image: "/assets/img/publications/prototype-based-explanation.png"
   },
   {
     title: "Constructing Fair Latent Space for Intersection of Fairness and Explainability",
@@ -129,7 +129,7 @@ export const publications = [
     topic: "Reliable and Safe AI Algorithms",
     venueShort: "AAAI",
     pdf: "https://arxiv.org/abs/2412.17523.pdf",
-    image: "/assets/img/AAAI2025.JPG"
+    image: "/assets/img/publications/constructing-fair-latent-space.png"
   },
   {
     title: "Mitigating Spurious Correlations via Disagreement Probability",
@@ -139,7 +139,7 @@ export const publications = [
     topic: "Reliable and Safe AI Algorithms",
     venueShort: "NeurIPS",
     pdf: "https://proceedings.neurips.cc/paper_files/paper/2024/file/879c5890a9d2ecdcb590c9674cda4a59-Paper-Conference.pdf",
-    image: "/assets/img/Neurips2024.JPG"
+    image: "/assets/img/publications/mitigating-spurious-correlations.png"
   },
   {
     title: "Nerflex: Flexible Neural Radiance Fields with Diffeomorphic Deformation",
@@ -148,7 +148,7 @@ export const publications = [
     year: 2024,
     topic: "Physical World",
     venueShort: "IEEE Access",
-    image: "/assets/img/ACCV2024.JPG"
+    image: "/assets/img/publications/nerflex-diffeomorphic-deformation.png"
   },
   {
     title: "Learning Dual Hierarchical Representation for 3D Surface Reconstruction",
@@ -158,7 +158,7 @@ export const publications = [
     topic: "Physical World",
     venueShort: "ACCV",
     pdf: "https://openaccess.thecvf.com/content/ACCV2024/papers/Shin_Learning_Dual_Hierarchical_Representation_for_3D_Surface_Reconstruction_ACCV_2024_paper.pdf",
-    image: "/assets/img/ACCV2024.JPG"
+    image: "/assets/img/publications/dual-hierarchical-surface-reconstruction.png"
   },
   {
     title: "Group-wise Verifiable Coded Computing under Byzantine Attacks and Stragglers",
@@ -168,7 +168,7 @@ export const publications = [
     topic: "Reliable Computing",
     venueShort: "TIFS",
     pdf: "https://ieeexplore.ieee.org/iel7/10206/4358835/10473190.pdf",
-    image: "/assets/img/TIFS2024.JPG",
+    image: "/assets/img/publications/group-wise-verifiable-coded-computing.png",
     note: "Impact Factor: 7.2"
   },
   {
@@ -178,7 +178,7 @@ export const publications = [
     year: 2024,
     topic: "Reliable and Safe AI Algorithms",
     venueShort: "IEEE Access",
-    image: "/assets/img/Neurips2024.JPG"
+    image: "/assets/img/publications/gbmix-group-balanced-mixup.png"
   },
   {
     title: "Straggler-Exploiting Fully Private Distributed Matrix Multiplication With Chebyshev Polynomials",
@@ -188,7 +188,7 @@ export const publications = [
     topic: "Reliable Computing",
     venueShort: "TCOM",
     pdf: "https://ieeexplore.ieee.org/iel7/26/5497975/10015804.pdf",
-    image: "/assets/img/TCOM2023.JPG",
+    image: "/assets/img/publications/straggler-exploiting-private-matrix-multiplication.png",
     note: "Impact Factor: 8.3"
   },
   {
@@ -199,7 +199,7 @@ export const publications = [
     topic: "Reliable Computing",
     venueShort: "JSAC",
     pdf: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9678333.pdf",
-    image: "/assets/img/JSAC2022.JPG",
+    image: "/assets/img/publications/hierarchical-group-testing.png",
     note: "Impact Factor: 16.4"
   },
   {
@@ -209,7 +209,7 @@ export const publications = [
     year: 2021,
     topic: "Reliable Computing",
     venueShort: "IEEE Access",
-    image: "/assets/img/JSAC2022.JPG"
+    image: "/assets/img/publications/securely-straggler-exploiting-coded-computation.png"
   },
   {
     title: "Chebyshev Polynomial Codes: Task Entanglement-based Coding for Distributed Matrix Multiplication",
@@ -219,7 +219,7 @@ export const publications = [
     topic: "Reliable Computing",
     venueShort: "ICML",
     pdf: "https://proceedings.mlr.press/v139/hong21b/hong21b.pdf",
-    image: "/assets/img/ICML2021.JPG",
+    image: "/assets/img/publications/chebyshev-polynomial-codes.png",
     note: "Oral Presentation"
   },
   {
@@ -229,6 +229,6 @@ export const publications = [
     year: 2020,
     topic: "Reliable Computing",
     venueShort: "IEEE Access",
-    image: "/assets/img/ICML2021.JPG"
+    image: "/assets/img/publications/squeezed-polynomial-codes.png"
   }
 ];
