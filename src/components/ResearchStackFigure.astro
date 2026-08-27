@@ -3,21 +3,24 @@ const layers = [
   {
     number: "03",
     title: "Reliable Computing",
-    summary: "Scalable, efficient, and verifiable computation for trustworthy AI infrastructure.",
+    label: "Infrastructure",
+    summary: "Efficient, distributed, verifiable, and quantum computing foundations.",
     topics: ["Efficient Computing", "Distributed Computing", "Verifiable Computing", "Quantum Computing"],
     tone: "computing"
   },
   {
     number: "02",
     title: "Foundation Models",
-    summary: "Reliable learning and inference for language, generative, and multimodal AI systems.",
+    label: "Models",
+    summary: "Reliable learning and inference for LLMs, generative AI, and multimodal systems.",
     topics: ["LLMs", "Generative AI", "Multimodal Models", "Aligned AI"],
     tone: "models"
   },
   {
     number: "01",
     title: "Physical World",
-    summary: "Deployable intelligence for autonomous, embodied, and robotic systems.",
+    label: "Deployment",
+    summary: "Trustworthy intelligence for autonomous, embodied, and robotic systems.",
     topics: ["Autonomous Driving", "VLA Models", "Embodied AI", "Robotics"],
     tone: "physical"
   }
@@ -30,32 +33,40 @@ const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explain
   <div class="stack-diagram">
     <figcaption class="stack-heading">
       <span class="eyebrow">Research Stack</span>
-      <strong id="research-stack-title">Reliable AI across three layers</strong>
+      <strong id="research-stack-title">Three layers connected by reliable AI algorithms</strong>
     </figcaption>
 
-    <div class="stack-layers" aria-label="Three research layers">
-      {layers.map((layer) => (
-        <section class={`stack-layer ${layer.tone}`}>
-          <div class="layer-label">
-            <span>Layer {layer.number}</span>
-            <h2>{layer.title}</h2>
-          </div>
-          <p>{layer.summary}</p>
-          <ul>
-            {layer.topics.map((topic) => <li>{topic}</li>)}
-          </ul>
-        </section>
-      ))}
-    </div>
-
-    <section class="algorithm-layer">
-      <div>
-        <span>Shared Algorithm Layer</span>
-        <h2>Reliable &amp; Safe AI Algorithms</h2>
+    <div class="stack-body">
+      <div class="stack-layers" aria-label="Three research layers">
+        {layers.map((layer) => (
+          <section class={`stack-layer ${layer.tone}`}>
+            <div class="layer-number" aria-hidden="true">{layer.number}</div>
+            <div class="layer-copy">
+              <span>{layer.label}</span>
+              <h2>{layer.title}</h2>
+              <p>{layer.summary}</p>
+            </div>
+            <ul class="layer-topics">
+              {layer.topics.map((topic) => <li>{topic}</li>)}
+            </ul>
+          </section>
+        ))}
       </div>
-      <ul>
-        {algorithms.map((topic) => <li>{topic}</li>)}
-      </ul>
-    </section>
+
+      <section class="algorithm-layer">
+        <div class="algorithm-spine" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="algorithm-copy">
+          <span>Algorithm Layer</span>
+          <h2>Reliable &amp; Safe AI</h2>
+        </div>
+        <ul>
+          {algorithms.map((topic) => <li>{topic}</li>)}
+        </ul>
+      </section>
+    </div>
   </div>
 </figure>
