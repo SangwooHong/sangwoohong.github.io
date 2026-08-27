@@ -1,24 +1,33 @@
 ---
 import { crossCutting, researchAreas } from "../data/research";
+
+const layers = [...researchAreas].reverse();
 ---
 
-<div class="stack-figure" aria-label="TML research stack">
-  <div class="stack-layers">
-    {[...researchAreas].reverse().map((area) => (
-      <section class="stack-layer">
-        <div>
-          <h3>{area.title}</h3>
-          <p>{area.summary}</p>
-        </div>
-        <ul>
-          {area.topics.map((topic) => <li>{topic}</li>)}
-        </ul>
-      </section>
-    ))}
+<div class="stack-figure" aria-label="TML research stack: three layers connected by shared reliable and safe AI algorithms">
+  <div class="stack-canvas">
+    <div class="stack-layers" aria-label="Three research layers">
+      {layers.map((area, index) => (
+        <section class="stack-layer">
+          <div class="layer-index">Layer {index + 1}</div>
+          <div class="layer-copy">
+            <h3>{area.title}</h3>
+            <p>{area.summary}</p>
+          </div>
+          <ul class="layer-topics">
+            {area.topics.map((topic) => <li>{topic}</li>)}
+          </ul>
+          <span class="layer-connector" aria-hidden="true"></span>
+        </section>
+      ))}
+    </div>
+    <aside class="algorithm-axis">
+      <div class="axis-line" aria-hidden="true"></div>
+      <span class="axis-label">Shared Algorithms</span>
+      <h3>{crossCutting.title}</h3>
+      <div class="axis-topics">
+        {crossCutting.topics.map((topic) => <span>{topic}</span>)}
+      </div>
+    </aside>
   </div>
-  <aside class="cross-pillar">
-    <span>Cross-cutting algorithms</span>
-    <h3>{crossCutting.title}</h3>
-    <p>{crossCutting.topics.join(" / ")}</p>
-  </aside>
 </div>
