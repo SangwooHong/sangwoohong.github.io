@@ -22,8 +22,8 @@ export const researchAreas: ResearchArea[] = [
   {
     title: "Physical World",
     summary:
-      "Reliable AI for real-world perception and action, including autonomous driving, VLA models, embodied AI, and robotics.",
-    topics: ["Autonomous Driving", "Vision-Language-Action", "Embodied AI", "Robotics"]
+      "Reliable AI for real-world perception and action, including autonomous driving, Vision-Language-Action (VLA) models, and embodied AI.",
+    topics: ["Autonomous Driving", "Vision-Language-Action (VLA)", "Embodied AI"]
   }
 ];
 

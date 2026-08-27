@@ -1,33 +1,43 @@
 ---
+interface Props {
+  variant?: "compact" | "detailed";
+}
+
+const { variant = "detailed" } = Astro.props;
+const isCompact = variant === "compact";
+
 const layers = [
   {
     title: "Physical World",
     label: "Deployment",
-    topics: ["Autonomous Driving", "VLA", "Embodied AI", "Robotics"]
+    topics: ["Autonomous Driving", "Vision-Language-Action (VLA)", "Embodied AI"],
+    compactTopics: ["Autonomous Driving", "VLA", "Embodied AI"]
   },
   {
     title: "Foundation Models",
     label: "Models",
-    topics: ["LLMs", "Generative AI", "Multimodal Models"]
+    topics: ["LLMs", "Generative AI", "Multimodal Models"],
+    compactTopics: ["LLMs", "Generative AI", "Multimodal"]
   },
   {
     title: "Reliable Computing",
     label: "Computing Foundation",
-    topics: ["Efficient Computing", "Distributed Computing", "Verifiable Computing", "Quantum / Next-Gen Computing"]
+    topics: ["Efficient Computing", "Distributed Computing", "Verifiable Computing", "Quantum / Next-Gen Computing"],
+    compactTopics: ["Efficient", "Distributed", "Verifiable", "Quantum"]
   }
 ];
 
 const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explainability"];
 ---
 
-<figure class="stack-figure" aria-labelledby="research-stack-title">
-  <div class="stack-diagram">
+<figure class="stack-figure" aria-labelledby={`research-stack-title-${variant}`}>
+  <div class:list={["stack-diagram", `stack-diagram-${variant}`]}>
     <figcaption class="stack-heading">
       <div>
         <span class="eyebrow">Research Framework</span>
-        <strong id="research-stack-title">Reliability across the AI stack</strong>
+        <strong id={`research-stack-title-${variant}`}>Reliability Across the AI Stack</strong>
       </div>
-      <p>Three system levels, connected by one cross-layer algorithmic pillar.</p>
+      {!isCompact && <p>Three system levels, connected by one cross-layer algorithmic pillar.</p>}
     </figcaption>
 
     <div class="stack-body">
@@ -35,11 +45,11 @@ const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explain
         {layers.map((layer) => (
           <section class="stack-layer">
             <div class="layer-copy">
-              <span>{layer.label}</span>
+              {!isCompact && <span>{layer.label}</span>}
               <h2>{layer.title}</h2>
             </div>
             <ul class="layer-topics">
-              {layer.topics.map((topic) => <li>{topic}</li>)}
+              {(isCompact ? layer.compactTopics : layer.topics).map((topic) => <li>{topic}</li>)}
             </ul>
           </section>
         ))}
@@ -53,9 +63,16 @@ const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explain
 
       <section class="algorithm-layer">
         <div class="algorithm-copy">
-          <span>Cross-Layer Pillar</span>
-          <h2>Reliable &amp; Safe AI Algorithms</h2>
-          <p>Applies across all three levels</p>
+          {!isCompact && <span>Cross-Layer Pillar</span>}
+          {isCompact ? (
+            <h2 aria-label="Reliable & Safe AI Algorithms">
+              Reliable &amp; Safe AI
+              <small>Cross-layer algorithms</small>
+            </h2>
+          ) : (
+            <h2>Reliable &amp; Safe AI Algorithms</h2>
+          )}
+          {!isCompact && <p>Applies across all three levels</p>}
         </div>
         <ul>
           {algorithms.map((topic) => <li>{topic}</li>)}
