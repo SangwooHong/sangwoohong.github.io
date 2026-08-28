@@ -7,6 +7,13 @@
   --line: #dce5df;
   --paper: #ffffff;
   --paper-soft: #f7f8f7;
+  --layer-computing: #005426;
+  --layer-computing-bg: #ffffff;
+  --layer-foundation: #2c6673;
+  --layer-foundation-bg: #f8fbfb;
+  --layer-physical: #5b704e;
+  --layer-physical-bg: #fbfcf9;
+  --reliability: #005426;
   --max: 1120px;
 }
 
@@ -329,11 +336,38 @@ h3 {
   min-height: 108px;
   padding: 17px 19px;
   border-bottom: 1px solid #bdcec3;
+  background: var(--paper);
 }
 
 .stack-layer:last-child {
   border-bottom: 0;
-  background: var(--paper);
+}
+
+.stack-layer-computing {
+  box-shadow: inset 4px 0 0 var(--layer-computing);
+  background: var(--layer-computing-bg);
+}
+
+.stack-layer-foundation {
+  box-shadow: inset 4px 0 0 var(--layer-foundation);
+  background: var(--layer-foundation-bg);
+}
+
+.stack-layer-physical {
+  box-shadow: inset 4px 0 0 var(--layer-physical);
+  background: var(--layer-physical-bg);
+}
+
+.stack-layer-computing .layer-copy h2 {
+  color: var(--layer-computing);
+}
+
+.stack-layer-foundation .layer-copy h2 {
+  color: var(--layer-foundation);
+}
+
+.stack-layer-physical .layer-copy h2 {
+  color: var(--layer-physical);
 }
 
 .layer-copy {
@@ -680,13 +714,51 @@ h3 {
   word-break: keep-all;
 }
 
-.current-research-layer {
+.current-research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
   margin: auto 0 0;
-  color: var(--muted);
-  font-size: 0.72rem;
-  font-weight: 700;
-  line-height: 1.4;
+}
+
+.current-research-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 2px 7px;
+  border: 1px solid var(--line);
+  border-left-width: 3px;
+  background: var(--paper);
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.3;
   text-transform: uppercase;
+}
+
+.current-research-tags .tag-layer[data-layer="Reliable Computing"],
+.current-research-meta span[data-layer="Reliable Computing"] {
+  border-left-color: var(--layer-computing);
+  color: var(--layer-computing);
+  background: var(--layer-computing-bg);
+}
+
+.current-research-tags .tag-layer[data-layer="Foundation Models"],
+.current-research-meta span[data-layer="Foundation Models"] {
+  border-left-color: var(--layer-foundation);
+  color: var(--layer-foundation);
+  background: var(--layer-foundation-bg);
+}
+
+.current-research-tags .tag-layer[data-layer="Physical World"],
+.current-research-meta span[data-layer="Physical World"] {
+  border-left-color: var(--layer-physical);
+  color: var(--layer-physical);
+  background: var(--layer-physical-bg);
+}
+
+.current-research-tags .tag-reliability {
+  border-left-color: var(--reliability);
+  color: var(--reliability);
 }
 
 .current-research-meta,
@@ -704,6 +776,11 @@ h3 {
   font-weight: 800;
   line-height: 1.4;
   text-transform: uppercase;
+}
+
+.current-research-meta span {
+  padding-left: 8px;
+  border-left: 3px solid var(--reliability);
 }
 
 .current-research-meta span + span::before,
@@ -1020,6 +1097,35 @@ h3 {
 .research-area-card {
   display: grid;
   align-content: start;
+}
+
+.research-area-card[data-layer="Reliable Computing"] {
+  border-top: 3px solid var(--layer-computing);
+}
+
+.research-area-card[data-layer="Foundation Models"] {
+  border-top: 3px solid var(--layer-foundation);
+}
+
+.research-area-card[data-layer="Physical World"] {
+  border-top: 3px solid var(--layer-physical);
+}
+
+.research-area-figure {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0 0 18px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: var(--paper-soft);
+}
+
+.research-area-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .representative-papers {
@@ -1372,6 +1478,10 @@ h3 {
   margin-top: 18px;
 }
 
+.compact-support-grid {
+  gap: 16px 22px;
+}
+
 .support-grid > div {
   padding-top: 16px;
   border-top: 1px solid var(--line);
@@ -1441,8 +1551,9 @@ h3 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 18px;
   margin-top: 20px;
 }
 
@@ -1453,8 +1564,8 @@ h3 {
 
 .gallery-item img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border: 1px solid var(--line);
   background: var(--paper-soft);
 }
@@ -1625,6 +1736,10 @@ h3 {
   .process-list li,
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .current-research-tags {
+    gap: 6px;
   }
 
   .join-block,

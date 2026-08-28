@@ -29,7 +29,7 @@ export const people = {
       name: "Youngmin Oh",
       role: "Integrated M.S.-Ph.D. Program",
       interests: "Machine Unlearning, Model Collapse",
-      currentResearchIds: ["sequential-machine-unlearning", "shortcut-bias-autonomous-driving"],
+      currentResearchIds: ["sequential-machine-unlearning"],
       image: "/assets/img/people/youngmin-oh.png"
     },
     {

@@ -18,12 +18,15 @@ const researchLabels = [item.layer, ...(item.algorithmTags ?? [])];
       <p class="current-research-keyword">{item.displayKeyword}</p>
       <h3>{title}</h3>
       <p class="current-research-home-question" lang="ko">{item.homepageQuestionKo}</p>
-      <p class="current-research-layer">{item.layer}</p>
+      <div class="current-research-tags" aria-label="Research metadata">
+        <span class="tag-layer" data-layer={item.layer}>{item.layer}</span>
+        {item.algorithmTags?.map((tag) => <span class="tag-reliability">{tag}</span>)}
+      </div>
     </>
   ) : (
     <>
       <p class="current-research-meta">
-        {researchLabels.map((label) => <span>{label}</span>)}
+        {researchLabels.map((label) => <span data-layer={label}>{label}</span>)}
       </p>
       <h3>{title}</h3>
       <p class="current-research-korean" lang="ko">{item.koreanSummary}</p>

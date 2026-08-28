@@ -7,6 +7,7 @@ export type ReliabilityProblem =
   | "Unlearning"
   | "Privacy"
   | "Robustness"
+  | "Fairness"
   | "Alignment"
   | "Explainability";
 
@@ -96,6 +97,7 @@ export const publications: Publication[] = [
     venue: "IEEE Transactions on Image Processing",
     year: 2026,
     layer: "Foundation Models",
+    algorithmTags: ["Fairness"],
     venueShort: "TIP",
     image: "/assets/img/publications/bias-alleviation-network-pruning.png",
     links: {
@@ -215,7 +217,7 @@ export const publications: Publication[] = [
     venue: "The Association for the Advancement of Artificial Intelligence",
     year: 2025,
     layer: "Foundation Models",
-    algorithmTags: ["Explainability"],
+    algorithmTags: ["Fairness", "Explainability"],
     venueShort: "AAAI",
     image: "/assets/img/publications/constructing-fair-latent-space.png",
     links: {
@@ -286,6 +288,7 @@ export const publications: Publication[] = [
     venue: "IEEE Access",
     year: 2024,
     layer: "Foundation Models",
+    algorithmTags: ["Fairness"],
     venueShort: "IEEE Access",
     image: "/assets/img/publications/gbmix-group-balanced-mixup.png",
     links: {

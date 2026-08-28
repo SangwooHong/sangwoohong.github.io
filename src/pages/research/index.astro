@@ -51,7 +51,10 @@ import { reliabilityProblems, researchAreas } from "../../data/research";
       />
       <div class="area-grid research-layer-grid">
         {researchAreas.map((area) => (
-          <article class="area-card research-area-card">
+          <article class="area-card research-area-card" data-layer={area.title}>
+            <figure class="research-area-figure">
+              <img src={area.visualImage} alt={area.visualAlt} loading="lazy" />
+            </figure>
             <h2>{area.title}</h2>
             <p class="area-korean" lang="ko">{area.koreanSummary}</p>
             <p>{area.summary}</p>
