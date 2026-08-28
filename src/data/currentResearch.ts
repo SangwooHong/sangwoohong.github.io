@@ -4,6 +4,10 @@ export interface CurrentResearch {
   id: string;
   title: string;
   shortTitle?: string;
+  displayKeyword?: string;
+  homepageTitle?: string;
+  homepageQuestionKo?: string;
+  homepageOrder?: number;
   koreanSummary: string;
   question: string;
   layer: ResearchLayer;
@@ -16,6 +20,10 @@ export const currentResearch: CurrentResearch[] = [
   {
     id: "sequential-machine-unlearning",
     title: "Preventing Degradation in Sequential Machine Unlearning",
+    displayKeyword: "Unlearning",
+    homepageTitle: "Sequential Machine Unlearning",
+    homepageQuestionKo: "반복적인 정보 삭제에도 모델의 성능을 유지할 수 있을까?",
+    homepageOrder: 1,
     koreanSummary: "연속적인 정보 삭제가 누적될 때 발생하는 모델 성능 저하를 분석하고 완화합니다.",
     question: "How can models keep forgetting without progressively losing their capabilities?",
     layer: "Foundation Models",
@@ -26,6 +34,10 @@ export const currentResearch: CurrentResearch[] = [
     id: "qng-accelerated-quantum-optimization",
     title: "Accelerating Variational Quantum Algorithms with Quantum Natural Gradient",
     shortTitle: "QNG-Accelerated Quantum Optimization",
+    displayKeyword: "Quantum Computing",
+    homepageTitle: "QNG-Accelerated Quantum Optimization",
+    homepageQuestionKo: "측정과 피드백 비용을 줄여 양자 최적화를 가속할 수 있을까?",
+    homepageOrder: 5,
     koreanSummary: "QNG의 측정·피드백 비용을 줄여 변분 양자 알고리즘의 최적화를 가속합니다.",
     question: "How can we reduce measurement and feedback latency in quantum natural gradient optimization?",
     layer: "Reliable Computing",
@@ -35,6 +47,10 @@ export const currentResearch: CurrentResearch[] = [
   {
     id: "multi-agent-hallucination-detection",
     title: "Hallucination Detection in Multi-Agent Systems",
+    displayKeyword: "Multi-Agent Systems",
+    homepageTitle: "Hallucination Detection",
+    homepageQuestionKo: "에이전트 간 hallucination은 어떻게 발생하고 전파되는가?",
+    homepageOrder: 3,
     koreanSummary: "여러 AI 에이전트가 상호작용할 때 발생하고 전파되는 hallucination을 탐지합니다.",
     question: "How do hallucinations emerge and propagate among interacting AI agents?",
     layer: "Foundation Models",
@@ -44,6 +60,10 @@ export const currentResearch: CurrentResearch[] = [
   {
     id: "shortcut-bias-autonomous-driving",
     title: "Detecting Shortcut Bias in World Models for Autonomous Driving",
+    displayKeyword: "World Models",
+    homepageTitle: "Shortcut Bias in Autonomous Driving",
+    homepageQuestionKo: "월드 모델은 실제 세계를 학습하는가, 데이터의 shortcut을 학습하는가?",
+    homepageOrder: 2,
     koreanSummary: "자율주행 월드 모델이 실제 세계의 구조가 아닌 데이터의 shortcut에 의존하는 현상을 탐지합니다.",
     question: "Are world models learning the physical world — or shortcuts in the data?",
     layer: "Physical World",
@@ -53,6 +73,10 @@ export const currentResearch: CurrentResearch[] = [
   {
     id: "spurious-correlations-protein-models",
     title: "Mitigating Spurious Correlations in Protein Foundation Models",
+    displayKeyword: "AI for Science",
+    homepageTitle: "Protein Foundation Models",
+    homepageQuestionKo: "단백질 모델은 비생물학적 shortcut에 의존하는가?",
+    homepageOrder: 4,
     koreanSummary: "단백질 모델이 사용하는 비생물학적 spurious signal과 shortcut을 탐지하고 완화합니다.",
     question: "Do protein models rely on non-biological shortcuts, and how can we identify and mitigate them?",
     layer: "Foundation Models",
@@ -103,7 +127,9 @@ export const currentResearch: CurrentResearch[] = [
   }
 ];
 
-export const homeCurrentResearch = currentResearch.filter((item) => item.featuredOnHome);
+export const homeCurrentResearch = currentResearch
+  .filter((item) => item.featuredOnHome)
+  .sort((a, b) => (a.homepageOrder ?? 0) - (b.homepageOrder ?? 0));
 
 export const getCurrentResearchByAlgorithm = (problem: ReliabilityProblem) =>
   currentResearch.filter((item) => item.algorithmTags?.includes(problem));

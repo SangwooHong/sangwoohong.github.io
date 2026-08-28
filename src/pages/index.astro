@@ -13,21 +13,6 @@ import { featuredPublications } from "../data/publications";
 <BaseLayout>
   <Hero />
 
-  <section class="section">
-    <div class="container">
-      <SectionTitle
-        eyebrow="Current Research"
-        title="현재 TML에서 진행 중인 연구"
-        description="TML이 현재 탐구하고 있는 연구 문제와 기술적 질문입니다."
-      />
-      <div class="current-research-grid current-research-grid-home">
-        {homeCurrentResearch.map((item) => (
-          <CurrentResearchCard item={item} compact />
-        ))}
-      </div>
-    </div>
-  </section>
-
   <section class="section muted">
     <div class="container">
       <SectionTitle
@@ -38,6 +23,21 @@ import { featuredPublications } from "../data/publications";
       <div class="feature-grid">
         {featuredPublications.slice(0, 3).map((publication) => (
           <PublicationEntry publication={publication} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Current Research"
+        title="현재 TML에서 진행 중인 연구"
+        description="TML이 현재 해결하고 있는 핵심 연구 문제입니다."
+      />
+      <div class="current-research-grid current-research-grid-home">
+        {homeCurrentResearch.map((item) => (
+          <CurrentResearchCard item={item} variant="home" />
         ))}
       </div>
     </div>

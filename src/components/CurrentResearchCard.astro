@@ -3,27 +3,39 @@ import type { CurrentResearch } from "../data/currentResearch";
 
 interface Props {
   item: CurrentResearch;
-  compact?: boolean;
+  variant?: "home" | "detailed";
 }
 
-const { item, compact = false } = Astro.props;
-const title = compact && item.shortTitle ? item.shortTitle : item.title;
+const { item, variant = "detailed" } = Astro.props;
+const isHome = variant === "home";
+const title = isHome ? (item.homepageTitle ?? item.shortTitle ?? item.title) : item.title;
 const researchLabels = [item.layer, ...(item.algorithmTags ?? [])];
 ---
 
-<article class:list={["current-research-card", compact && "current-research-card-compact"]} id={`current-${item.id}`}>
-  <p class="current-research-meta">
-    {researchLabels.map((label) => <span>{label}</span>)}
-  </p>
-  <h3>{title}</h3>
-  <p class="current-research-korean" lang="ko">{item.koreanSummary}</p>
-  <p class="current-research-question">
-    <span>Research Question</span>
-    <strong>{item.question}</strong>
-  </p>
-  {item.domainTags && item.domainTags.length > 0 && (
-    <p class="current-research-domains">
-      {item.domainTags.map((tag) => <span>{tag}</span>)}
-    </p>
+<article class:list={["current-research-card", isHome && "current-research-card-home"]} id={`current-${item.id}`}>
+  {isHome ? (
+    <>
+      <p class="current-research-keyword">{item.displayKeyword}</p>
+      <h3>{title}</h3>
+      <p class="current-research-home-question" lang="ko">{item.homepageQuestionKo}</p>
+      <p class="current-research-layer">{item.layer}</p>
+    </>
+  ) : (
+    <>
+      <p class="current-research-meta">
+        {researchLabels.map((label) => <span>{label}</span>)}
+      </p>
+      <h3>{title}</h3>
+      <p class="current-research-korean" lang="ko">{item.koreanSummary}</p>
+      <p class="current-research-question">
+        <span>Research Question</span>
+        <strong>{item.question}</strong>
+      </p>
+      {item.domainTags && item.domainTags.length > 0 && (
+        <p class="current-research-domains">
+          {item.domainTags.map((tag) => <span>{tag}</span>)}
+        </p>
+      )}
+    </>
   )}
 </article>
