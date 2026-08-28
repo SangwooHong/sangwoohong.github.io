@@ -1,16 +1,12 @@
 ---
-import { navItems, site } from "../data/site";
+import { navItems } from "../data/site";
 const currentPath = Astro.url.pathname;
 ---
 
 <header class="site-header" data-site-header>
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="TML home">
-      <span class="brand-mark">TML</span>
-      <span class="brand-text">
-        <strong>{site.fullName}</strong>
-        <span>{site.university}</span>
-      </span>
+      <img class="brand-logo" src="/assets/img/brand/Large_Logo.png" alt="Trustworthy Machine Learning Lab, Konkuk University" />
     </a>
 
     <button

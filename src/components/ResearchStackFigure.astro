@@ -4,88 +4,15 @@ interface Props {
 }
 
 const { variant = "detailed" } = Astro.props;
-const isCompact = variant === "compact";
-
-const layers = [
-  {
-    key: "physical",
-    title: "Physical World",
-    label: "Deployment",
-    korean: "자율주행과 VLA 등 실제 환경에서 동작하는 AI",
-    topics: ["Autonomous Driving", "Vision-Language-Action (VLA)", "Embodied AI"],
-    compactTopics: ["Autonomous Driving", "VLA", "Embodied AI"]
-  },
-  {
-    key: "foundation",
-    title: "Foundation Models",
-    label: "Models",
-    korean: "LLM, 생성형 AI, 멀티모달 모델의 학습과 활용",
-    topics: ["LLMs", "Generative AI", "Multimodal Models"],
-    compactTopics: ["LLMs", "Generative AI", "Multimodal"]
-  },
-  {
-    key: "computing",
-    title: "Reliable Computing",
-    label: "Computing Foundation",
-    korean: "AI를 효율적이고 안정적으로 실행하기 위한 연산·시스템 기술",
-    topics: ["Efficient Computing", "Distributed Computing", "Verifiable Computing", "Quantum / Next-Gen Computing"],
-    compactTopics: ["Efficient", "Distributed", "Verifiable", "Quantum"]
-  }
-];
-
-const algorithms = ["Privacy & Unlearning", "Robustness", "Fairness", "Alignment & Explainability"];
+const loading = variant === "compact" ? "eager" : "lazy";
 ---
 
-<figure class="stack-figure" aria-labelledby={`research-stack-title-${variant}`}>
-  <div class:list={["stack-diagram", `stack-diagram-${variant}`]}>
-    <figcaption class="stack-heading">
-      <div>
-        <span class="eyebrow">Research Framework</span>
-        <strong id={`research-stack-title-${variant}`}>Reliability Across the AI Stack</strong>
-      </div>
-      {!isCompact && <p>Three system levels, connected by one cross-layer algorithmic pillar.</p>}
-    </figcaption>
-
-    <div class="stack-body">
-      <div class="stack-layers" aria-label="Research stack from deployment to computing foundation">
-        {layers.map((layer) => (
-          <section class:list={["stack-layer", `stack-layer-${layer.key}`]} data-layer={layer.title}>
-            <div class="layer-copy">
-              {!isCompact && <span>{layer.label}</span>}
-              <h2>{layer.title}</h2>
-            </div>
-            <p class="layer-korean" lang="ko">{layer.korean}</p>
-            <ul class="layer-topics">
-              {(isCompact ? layer.compactTopics : layer.topics).map((topic) => <li>{topic}</li>)}
-            </ul>
-          </section>
-        ))}
-      </div>
-
-      <div class="stack-connectors" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <section class="algorithm-layer">
-        <div class="algorithm-copy">
-          {!isCompact && <span>Cross-Layer Pillar</span>}
-          {isCompact ? (
-            <h2 aria-label="Reliable & Safe AI Algorithms">
-              Reliable &amp; Safe AI
-              <small>Cross-layer algorithms</small>
-            </h2>
-          ) : (
-            <h2>Reliable &amp; Safe AI Algorithms</h2>
-          )}
-          <p class="algorithm-korean" lang="ko">AI의 신뢰성과 안전성을 높이는 알고리즘</p>
-          {!isCompact && <p class="algorithm-note">Applies across all three levels</p>}
-        </div>
-        <ul>
-          {algorithms.map((topic) => <li>{topic}</li>)}
-        </ul>
-      </section>
-    </div>
-  </div>
+<figure class:list={["stack-figure", "research-logo-figure", `research-logo-figure-${variant}`]}>
+  <img
+    class="research-logo-image"
+    src="/assets/img/brand/Research_Logo.png"
+    alt="TML research framework connecting Reliable Computing, Foundation Models, and Physical World with Reliable and Safe AI Algorithms."
+    loading={loading}
+    decoding="async"
+  />
 </figure>
