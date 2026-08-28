@@ -1,10 +1,13 @@
 ---
+import { currentResearch, type CurrentResearch } from "../data/currentResearch";
+
 interface Props {
   person: {
     name: string;
     role: string;
     affiliation?: string;
     interests?: string;
+    currentResearchIds?: string[];
     email?: string;
     github?: string;
     image?: string;
@@ -12,17 +15,37 @@ interface Props {
 }
 const person = Astro.props.person;
 const initials = person.name.split(" ").map((part) => part[0]).join("").slice(0, 2);
+const researchById = new Map(currentResearch.map((item) => [item.id, item]));
+const currentProjects = (person.currentResearchIds ?? [])
+  .map((id) => researchById.get(id))
+  .filter((item): item is CurrentResearch => Boolean(item));
+const displayResearchTitle = (item: CurrentResearch) => item.shortTitle ?? item.homepageTitle ?? item.title;
 ---
 
 <article class="person-card">
-  {person.image ? <img src={person.image} alt={`${person.name} portrait`} loading="lazy" /> : <div class="initials">{initials}</div>}
+  {person.image ? <img src={person.image} alt={person.name + " portrait"} loading="lazy" /> : <div class="initials">{initials}</div>}
   <div>
     <h3>{person.name}</h3>
     <p class="role">{person.role}</p>
     {person.affiliation && <p>{person.affiliation}</p>}
-    {person.interests && <p>{person.interests}</p>}
+    {person.interests && (
+      <p class="person-interests">
+        <span>Research Interests</span>
+        {person.interests}
+      </p>
+    )}
+    {currentProjects.length > 0 && (
+      <div class="person-current-research">
+        <span>Current Research</span>
+        <ul>
+          {currentProjects.map((project) => (
+            <li><a href={"/research/#current-" + project.id}>{displayResearchTitle(project)}</a></li>
+          ))}
+        </ul>
+      </div>
+    )}
     <div class="entry-links compact">
-      {person.email && <a href={`mailto:${person.email}`}>Email</a>}
+      {person.email && <a href={"mailto:" + person.email}>Email</a>}
       {person.github && <a href={person.github}>GitHub</a>}
     </div>
   </div>
