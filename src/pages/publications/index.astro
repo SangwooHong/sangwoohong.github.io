@@ -2,10 +2,11 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PublicationEntry from "../../components/PublicationEntry.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
-import { publications } from "../../data/publications";
+import { publications, type ReliabilityProblem, type ResearchLayer } from "../../data/publications";
 
 const years = [...new Set(publications.map((pub) => pub.year))].sort((a, b) => b - a);
-const topics = [...new Set(publications.map((pub) => pub.topic))].sort();
+const layers: ResearchLayer[] = ["Reliable Computing", "Foundation Models", "Physical World"];
+const problems: ReliabilityProblem[] = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explainability"];
 ---
 
 <BaseLayout title="Publications">
@@ -19,9 +20,20 @@ const topics = [...new Set(publications.map((pub) => pub.topic))].sort();
 
   <section class="section">
     <div class="container">
-      <SectionTitle title="Research Topics" description="Publications organized across TML's research framework." />
-      <div class="tag-row large">
-        {topics.map((topic) => <span>{topic}</span>)}
+      <SectionTitle title="Research Taxonomy" description="Publications organized by AI stack layer and, when applicable, a cross-layer reliability problem." />
+      <div class="publication-taxonomy">
+        <div>
+          <h2>Layer</h2>
+          <div class="tag-row large">
+            {layers.map((layer) => <span>{layer}</span>)}
+          </div>
+        </div>
+        <div>
+          <h2>Reliability Problem</h2>
+          <div class="tag-row large">
+            {problems.map((problem) => <span>{problem}</span>)}
+          </div>
+        </div>
       </div>
       <div class="year-list">
         {years.map((year) => (

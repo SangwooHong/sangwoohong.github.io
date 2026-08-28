@@ -1,8 +1,14 @@
-export type PublicationTopic =
+export type ResearchLayer =
   | "Reliable Computing"
   | "Foundation Models"
-  | "Physical World"
-  | "Reliable & Safe AI Algorithms";
+  | "Physical World";
+
+export type ReliabilityProblem =
+  | "Unlearning"
+  | "Privacy"
+  | "Robustness"
+  | "Alignment"
+  | "Explainability";
 
 export interface Publication {
   id: string;
@@ -10,7 +16,8 @@ export interface Publication {
   authors: string;
   venue: string;
   year: number;
-  topic: PublicationTopic;
+  layer: ResearchLayer;
+  algorithmTags?: ReliabilityProblem[];
   venueShort: string;
   image: string;
   links?: {
@@ -20,7 +27,7 @@ export interface Publication {
   };
   note?: string;
   featured?: boolean;
-  representativeFor?: PublicationTopic[];
+  representativeFor?: ResearchLayer[];
 }
 
 export const publications: Publication[] = [
@@ -30,7 +37,8 @@ export const publications: Publication[] = [
     authors: "Idris Nechnech, Sehwan Kim, Jimin Seo, Yeongoon Kim, Minhae Oh, Sangwoo Hong, Jungwoo Lee",
     venue: "Findings of the Association for Computational Linguistics: EMNLP",
     year: 2026,
-    topic: "Foundation Models",
+    layer: "Foundation Models",
+    algorithmTags: ["Alignment"],
     venueShort: "EMNLP Findings",
     image: "/assets/img/publications/function-level-execution-feedback.png",
     links: {
@@ -45,7 +53,8 @@ export const publications: Publication[] = [
     authors: "Jiyoon Shin, Sangwoo Hong",
     venue: "British Machine Vision Conference",
     year: 2026,
-    topic: "Physical World",
+    layer: "Physical World",
+    algorithmTags: ["Robustness"],
     venueShort: "BMVC",
     image: "/assets/img/publications/geometry-preserving-robust-neural-reconstruction.png",
     representativeFor: ["Physical World"]
@@ -56,7 +65,7 @@ export const publications: Publication[] = [
     authors: "Seunghyun Moon, Seowon Ji, Sangwoo Hong, Eunji Kwon",
     venue: "IEEE Transactions on Circuits and Systems II: Express Briefs",
     year: 2026,
-    topic: "Reliable Computing",
+    layer: "Reliable Computing",
     venueShort: "TCAS-II",
     image: "/assets/img/publications/predlm-sparse-llm-decoding-accelerator.png",
     links: {
@@ -70,7 +79,8 @@ export const publications: Publication[] = [
     authors: "Nakyung Lee, Sangwoo Hong, Jungwoo Lee",
     venue: "The 64th Annual Meeting of the Association for Computational Linguistics (Main paper)",
     year: 2026,
-    topic: "Foundation Models",
+    layer: "Foundation Models",
+    algorithmTags: ["Alignment"],
     venueShort: "ACL",
     image: "/assets/img/publications/efficient-process-reward-modeling.png",
     links: {
@@ -85,14 +95,14 @@ export const publications: Publication[] = [
     authors: "Sangwoo Hong, Sehwan Kim, Hyungjun Joo, Hyeonggeun Han, Jiyoon Shin, Yoav Wald, and Jungwoo Lee",
     venue: "IEEE Transactions on Image Processing",
     year: 2026,
-    topic: "Reliable & Safe AI Algorithms",
+    layer: "Foundation Models",
     venueShort: "TIP",
     image: "/assets/img/publications/bias-alleviation-network-pruning.png",
     links: {
       paper: "https://doi.org/10.1109/TIP.2026.3687070"
     },
     featured: true,
-    representativeFor: ["Reliable & Safe AI Algorithms"]
+    representativeFor: ["Foundation Models"]
   },
   {
     id: "beyond-prompts-diffusion-communication",
@@ -100,7 +110,7 @@ export const publications: Publication[] = [
     authors: "Wonjung Kim, Nakyung Lee, Sangwoo Hong*, Jungwoo Lee",
     venue: "IEEE Wireless Communications Letters",
     year: 2026,
-    topic: "Foundation Models",
+    layer: "Foundation Models",
     venueShort: "WCL",
     image: "/assets/img/publications/beyond-prompts-diffusion-communication.png",
     links: {
@@ -113,7 +123,7 @@ export const publications: Publication[] = [
     authors: "Jung Min Lee, Dohyeok Lee, Seokhun Ju, Taehyun Cho, Jin Woo Koo, Li Zhao, Sangwoo Hong, Jungwoo Lee",
     venue: "Proceedings of the 43rd International Conference on Machine Learning",
     year: 2026,
-    topic: "Physical World",
+    layer: "Physical World",
     venueShort: "ICML",
     image: "/assets/img/publications/mvp-lam-action-centric-latent-action.png",
     links: {
@@ -130,7 +140,7 @@ export const publications: Publication[] = [
     authors: "Sunbeom Jeong, Sehwan Kim, Hyeonggeun Han, Hyungjun Joo, Sangwoo Hong, Jungwoo Lee",
     venue: "40th Annual AAAI Conference on Artificial Intelligence",
     year: 2026,
-    topic: "Foundation Models",
+    layer: "Foundation Models",
     venueShort: "AAAI",
     image: "/assets/img/publications/adaptive-sampling-dataset-distillation.png",
     links: {
@@ -146,7 +156,7 @@ export const publications: Publication[] = [
     authors: "Hyunho Cha, Sangwoo Hong, Jungwoo Lee",
     venue: "Physical Review A",
     year: 2026,
-    topic: "Reliable Computing",
+    layer: "Reliable Computing",
     venueShort: "PRA",
     image: "/assets/img/publications/operator-aware-shadow-importance-sampling.png",
     links: {
@@ -160,13 +170,14 @@ export const publications: Publication[] = [
     authors: "Hyeonggeun Han*, Sehwan Kim*, Hyungjun Joo, Sangwoo Hong, Jungwoo Lee",
     venue: "The Thirty-ninth Annual Conference on Neural Information Processing Systems",
     year: 2025,
-    topic: "Reliable & Safe AI Algorithms",
+    layer: "Foundation Models",
+    algorithmTags: ["Privacy"],
     venueShort: "NeurIPS",
     image: "/assets/img/publications/adjusting-initial-noise-memorization.png",
     links: {
       paper: "https://arxiv.org/abs/2510.08625"
     },
-    representativeFor: ["Reliable & Safe AI Algorithms"]
+    representativeFor: ["Foundation Models"]
   },
   {
     id: "mix-from-failure",
@@ -174,7 +185,8 @@ export const publications: Publication[] = [
     authors: "Youngseok Yoon, Sangwoo Hong, Hyungjoon Joo, Yao Qin, Haewon Jeong, Jungwoo Lee",
     venue: "arXiv",
     year: 2025,
-    topic: "Reliable & Safe AI Algorithms",
+    layer: "Foundation Models",
+    algorithmTags: ["Robustness"],
     venueShort: "arXiv",
     image: "/assets/img/publications/mix-from-failure.png",
     links: {
@@ -188,7 +200,8 @@ export const publications: Publication[] = [
     authors: "Hyungjun Joo, Sangwoo Hong, Hyeonggeun Han, Youngseok Yoon, Jungwoo Lee",
     venue: "IEEE Access",
     year: 2025,
-    topic: "Reliable & Safe AI Algorithms",
+    layer: "Foundation Models",
+    algorithmTags: ["Explainability"],
     venueShort: "IEEE Access",
     image: "/assets/img/publications/prototype-based-explanation.png",
     links: {
@@ -201,7 +214,8 @@ export const publications: Publication[] = [
     authors: "Hyungjun Joo, Hyeonggeun Han, Sehwan Kim, Sangwoo Hong, Jungwoo Lee",
     venue: "The Association for the Advancement of Artificial Intelligence",
     year: 2025,
-    topic: "Reliable & Safe AI Algorithms",
+    layer: "Foundation Models",
+    algorithmTags: ["Explainability"],
     venueShort: "AAAI",
     image: "/assets/img/publications/constructing-fair-latent-space.png",
     links: {
@@ -214,13 +228,14 @@ export const publications: Publication[] = [
     authors: "Hyeonggeun Han, Sehwan Kim, Hyungjun Joo, Sangwoo Hong, Jungwoo Lee",
     venue: "The Thirty-eighth Annual Conference on Neural Information Processing Systems",
     year: 2024,
-    topic: "Reliable & Safe AI Algorithms",
+    layer: "Foundation Models",
+    algorithmTags: ["Robustness"],
     venueShort: "NeurIPS",
     image: "/assets/img/publications/mitigating-spurious-correlations.png",
     links: {
       paper: "https://proceedings.neurips.cc/paper_files/paper/2024/file/879c5890a9d2ecdcb590c9674cda4a59-Paper-Conference.pdf"
     },
-    representativeFor: ["Reliable & Safe AI Algorithms"]
+    representativeFor: ["Foundation Models"]
   },
   {
     id: "nerflex",
@@ -228,7 +243,7 @@ export const publications: Publication[] = [
     authors: "Jiyoon Shin, Sangwoo Hong, Jungwoo Lee",
     venue: "IEEE Access",
     year: 2024,
-    topic: "Physical World",
+    layer: "Physical World",
     venueShort: "IEEE Access",
     image: "/assets/img/publications/nerflex-diffeomorphic-deformation.png",
     links: {
@@ -241,7 +256,7 @@ export const publications: Publication[] = [
     authors: "Jiyoon Shin, Youngwook Kim, Sangwoo Hong, Jungwoo Lee",
     venue: "Asian Conference on Computer Vision",
     year: 2024,
-    topic: "Physical World",
+    layer: "Physical World",
     venueShort: "ACCV",
     image: "/assets/img/publications/dual-hierarchical-surface-reconstruction.png",
     links: {
@@ -255,7 +270,8 @@ export const publications: Publication[] = [
     authors: "Sangwoo Hong, Heecheol Yang, Youngseok Yoon, Jungwoo Lee",
     venue: "IEEE Transactions on Information Forensics and Security",
     year: 2024,
-    topic: "Reliable Computing",
+    layer: "Reliable Computing",
+    algorithmTags: ["Robustness"],
     venueShort: "TIFS",
     image: "/assets/img/publications/group-wise-verifiable-coded-computing.png",
     links: {
@@ -269,7 +285,7 @@ export const publications: Publication[] = [
     authors: "Sangwoo Hong, Youngseok Yoon, Hyungjun Joo, Jungwoo Lee",
     venue: "IEEE Access",
     year: 2024,
-    topic: "Reliable & Safe AI Algorithms",
+    layer: "Foundation Models",
     venueShort: "IEEE Access",
     image: "/assets/img/publications/gbmix-group-balanced-mixup.png",
     links: {
@@ -282,7 +298,8 @@ export const publications: Publication[] = [
     authors: "Sangwoo Hong, Heecheol Yang, Youngseok Yoon, Jungwoo Lee",
     venue: "IEEE Transactions on Communications",
     year: 2023,
-    topic: "Reliable Computing",
+    layer: "Reliable Computing",
+    algorithmTags: ["Privacy"],
     venueShort: "TCOM",
     image: "/assets/img/publications/straggler-exploiting-private-matrix-multiplication.png",
     links: {
@@ -295,7 +312,8 @@ export const publications: Publication[] = [
     authors: "Sangwoo Hong, Heecheol Yang, Jungwoo Lee",
     venue: "IEEE Journal on Selected Areas in Communications",
     year: 2022,
-    topic: "Reliable Computing",
+    layer: "Reliable Computing",
+    algorithmTags: ["Robustness"],
     venueShort: "JSAC",
     image: "/assets/img/publications/hierarchical-group-testing.png",
     links: {
@@ -308,7 +326,8 @@ export const publications: Publication[] = [
     authors: "Heecheol Yang, Sangwoo Hong, Jungwoo Lee",
     venue: "IEEE Access",
     year: 2021,
-    topic: "Reliable Computing",
+    layer: "Reliable Computing",
+    algorithmTags: ["Privacy"],
     venueShort: "IEEE Access",
     image: "/assets/img/publications/securely-straggler-exploiting-coded-computation.png",
     links: {
@@ -321,7 +340,7 @@ export const publications: Publication[] = [
     authors: "Sangwoo Hong, Heecheol Yang, Youngseok Yoon, Taehyun Cho, Jungwoo Lee",
     venue: "Proceedings of the 38th International Conference on Machine Learning",
     year: 2021,
-    topic: "Reliable Computing",
+    layer: "Reliable Computing",
     venueShort: "ICML",
     image: "/assets/img/publications/chebyshev-polynomial-codes.png",
     links: {
@@ -335,7 +354,7 @@ export const publications: Publication[] = [
     authors: "Sangwoo Hong, Heecheol Yang, Jungwoo Lee",
     venue: "IEEE Access",
     year: 2020,
-    topic: "Reliable Computing",
+    layer: "Reliable Computing",
     venueShort: "IEEE Access",
     image: "/assets/img/publications/squeezed-polynomial-codes.png",
     links: {
@@ -346,5 +365,8 @@ export const publications: Publication[] = [
 
 export const featuredPublications = publications.filter((publication) => publication.featured);
 
-export const getRepresentativePublications = (topic: PublicationTopic) =>
-  publications.filter((publication) => publication.representativeFor?.includes(topic));
+export const getRepresentativePublications = (layer: ResearchLayer) =>
+  publications.filter((publication) => publication.representativeFor?.includes(layer));
+
+export const getPublicationsByAlgorithm = (problem: ReliabilityProblem) =>
+  publications.filter((publication) => publication.algorithmTags?.includes(problem));

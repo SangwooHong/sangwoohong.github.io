@@ -1,10 +1,12 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import CurrentResearchCard from "../../components/CurrentResearchCard.astro";
 import ResearchStackFigure from "../../components/ResearchStackFigure.astro";
-import SectionTitle from "../../components/SectionTitle.astro";
 import RepresentativePaper from "../../components/RepresentativePaper.astro";
-import { crossCutting, researchAreas } from "../../data/research";
-import { getRepresentativePublications } from "../../data/publications";
+import SectionTitle from "../../components/SectionTitle.astro";
+import { currentResearch, getCurrentResearchByAlgorithm } from "../../data/currentResearch";
+import { getPublicationsByAlgorithm, getRepresentativePublications } from "../../data/publications";
+import { reliabilityProblems, researchAreas } from "../../data/research";
 ---
 
 <BaseLayout title="Research">
@@ -12,10 +14,9 @@ import { getRepresentativePublications } from "../../data/publications";
     <div class="container narrow">
       <p class="eyebrow">Research</p>
       <h1>Reliable AI from foundations to deployment.</h1>
-      <p>
-        TML studies reliability from computational foundations, through foundation
-        models, to AI systems operating in the physical world. Reliable &amp; Safe
-        AI Algorithms connect all three levels.
+      <p lang="ko">
+        TML은 계산 기반부터 Foundation Models, 실제 Physical World까지 AI의 신뢰성을 연구합니다.
+        Reliable &amp; Safe AI Algorithms는 이 세 계층을 가로질러 연결합니다.
       </p>
     </div>
   </section>
@@ -28,36 +29,89 @@ import { getRepresentativePublications } from "../../data/publications";
 
   <section class="section muted">
     <div class="container">
-      <SectionTitle title="Research Areas" />
-      <div class="area-grid">
+      <SectionTitle
+        eyebrow="Current Research"
+        title="현재 진행 중인 연구"
+        description="현재 TML이 해결하고자 탐구하는 8개의 연구 방향입니다."
+      />
+      <div class="current-research-grid current-research-grid-all">
+        {currentResearch.map((item) => (
+          <CurrentResearchCard item={item} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Research by Layer"
+        title="Research Across the AI Stack"
+        description="Research themes and representative publications organized by system layer."
+      />
+      <div class="area-grid research-layer-grid">
         {researchAreas.map((area) => (
           <article class="area-card research-area-card">
             <h2>{area.title}</h2>
+            <p class="area-korean" lang="ko">{area.koreanSummary}</p>
             <p>{area.summary}</p>
             <ul class="topic-list">
               {area.topics.map((topic) => <li>{topic}</li>)}
             </ul>
             <div class="representative-papers">
               <h3>Representative Papers</h3>
-              {getRepresentativePublications(area.title).map((publication) => (
+              {getRepresentativePublications(area.title).slice(0, 3).map((publication) => (
                 <RepresentativePaper publication={publication} />
               ))}
             </div>
           </article>
         ))}
-        <article class="area-card cross research-area-card">
-          <h2>{crossCutting.title}</h2>
-          <p>{crossCutting.summary}</p>
-          <ul class="topic-list">
-            {crossCutting.topics.map((topic) => <li>{topic}</li>)}
-          </ul>
-          <div class="representative-papers">
-            <h3>Representative Papers</h3>
-            {getRepresentativePublications(crossCutting.title).map((publication) => (
-              <RepresentativePaper publication={publication} />
-            ))}
-          </div>
-        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reliability-problems-section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Research by Reliability Problem"
+        title="Reliable & Safe AI Algorithms"
+        description="Cross-layer research organized by the reliability problem being addressed."
+      />
+      <div class="reliability-problem-list">
+        {reliabilityProblems.map((problem) => {
+          const relatedResearch = getCurrentResearchByAlgorithm(problem.title);
+          const relatedPublications = getPublicationsByAlgorithm(problem.title);
+
+          return (
+            <article class="reliability-problem" id={problem.title.toLowerCase()}>
+              <header>
+                <p class="eyebrow">Cross-Layer Problem</p>
+                <h2>{problem.title}</h2>
+                <p lang="ko">{problem.koreanQuestion}</p>
+              </header>
+              <div class="reliability-problem-content">
+                {relatedResearch.length > 0 && (
+                  <div class="problem-current-research">
+                    <h3>Current Research</h3>
+                    <ul>
+                      {relatedResearch.map((item) => (
+                        <li><a href={`#current-${item.id}`}>{item.title}</a></li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {relatedPublications.length > 0 && (
+                  <div class="problem-publications">
+                    <h3>Selected Publications</h3>
+                    {relatedPublications.slice(0, 4).map((publication) => (
+                      <RepresentativePaper publication={publication} />
+                    ))}
+                  </div>
+                )}
+              </div>
+            </article>
+          );
+        })}
       </div>
     </div>
   </section>

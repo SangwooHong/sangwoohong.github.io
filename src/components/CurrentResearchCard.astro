@@ -1,0 +1,29 @@
+---
+import type { CurrentResearch } from "../data/currentResearch";
+
+interface Props {
+  item: CurrentResearch;
+  compact?: boolean;
+}
+
+const { item, compact = false } = Astro.props;
+const title = compact && item.shortTitle ? item.shortTitle : item.title;
+const researchLabels = [item.layer, ...(item.algorithmTags ?? [])];
+---
+
+<article class:list={["current-research-card", compact && "current-research-card-compact"]} id={`current-${item.id}`}>
+  <p class="current-research-meta">
+    {researchLabels.map((label) => <span>{label}</span>)}
+  </p>
+  <h3>{title}</h3>
+  <p class="current-research-korean" lang="ko">{item.koreanSummary}</p>
+  <p class="current-research-question">
+    <span>Research Question</span>
+    <strong>{item.question}</strong>
+  </p>
+  {item.domainTags && item.domainTags.length > 0 && (
+    <p class="current-research-domains">
+      {item.domainTags.map((tag) => <span>{tag}</span>)}
+    </p>
+  )}
+</article>

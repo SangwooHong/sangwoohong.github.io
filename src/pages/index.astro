@@ -1,10 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CurrentResearchCard from "../components/CurrentResearchCard.astro";
 import Hero from "../components/Hero.astro";
 import JoinBanner from "../components/JoinBanner.astro";
 import NewsList from "../components/NewsList.astro";
 import PublicationEntry from "../components/PublicationEntry.astro";
 import SectionTitle from "../components/SectionTitle.astro";
+import { homeCurrentResearch } from "../data/currentResearch";
 import { people } from "../data/people";
 import { featuredPublications, publications } from "../data/publications";
 import { getProjectsWithStatus } from "../data/projects";
@@ -16,12 +18,27 @@ const activeProjects = getProjectsWithStatus().filter((project) => project.statu
 <BaseLayout>
   <Hero />
 
-  <section class="section">
+  <section class="section current-research-section">
     <div class="container">
       <SectionTitle
-        eyebrow="Featured Research"
+        eyebrow="Current Research"
+        title="현재 TML에서 진행 중인 연구"
+        description="TML이 현재 탐구하고 있는 연구 문제와 기술적 질문입니다."
+      />
+      <div class="current-research-grid current-research-grid-home">
+        {homeCurrentResearch.map((item) => (
+          <CurrentResearchCard item={item} compact />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section muted">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Featured Publications"
         title="Reliability Across the AI Stack"
-        description="Representative work across Foundation Models, Reliable & Safe AI Algorithms, and the Physical World."
+        description="Representative publications across Foundation Models, Reliable & Safe AI Algorithms, and the Physical World."
       />
       <div class="feature-grid">
         {featuredPublications.slice(0, 3).map((publication) => (
@@ -31,7 +48,7 @@ const activeProjects = getProjectsWithStatus().filter((project) => project.statu
     </div>
   </section>
 
-  <section class="section muted">
+  <section class="section">
     <div class="container two-column">
       <div>
         <SectionTitle eyebrow="Latest News" title="Recent Updates" />
