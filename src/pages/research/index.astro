@@ -5,6 +5,7 @@ import ResearchStackFigure from "../../components/ResearchStackFigure.astro";
 import RepresentativePaper from "../../components/RepresentativePaper.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
 import { currentResearch, getCurrentResearchByAlgorithm } from "../../data/currentResearch";
+import { people } from "../../data/people";
 import { getPublicationsByAlgorithm, getRepresentativePublications, type Publication } from "../../data/publications";
 import { reliabilityProblems, researchAreas } from "../../data/research";
 
@@ -12,6 +13,22 @@ const uniquePublications = (publications: Publication[]) =>
   publications.filter((publication, index, list) => list.findIndex((item) => item.id === publication.id) === index);
 
 const problemId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+const studentResearchIds = new Set(
+  [...people.graduate, ...people.undergraduate].flatMap((student) =>
+    "currentResearchIds" in student ? (student.currentResearchIds ?? []) : []
+  )
+);
+
+const researchRank = (item: (typeof currentResearch)[number]) => {
+  if (!item.image) return 2;
+  return studentResearchIds.has(item.id) ? 0 : 1;
+};
+
+const researchPageItems = currentResearch
+  .map((item, index) => ({ item, index }))
+  .sort((a, b) => researchRank(a.item) - researchRank(b.item) || a.index - b.index)
+  .map(({ item }) => item);
 ---
 
 <BaseLayout title="Research">
@@ -40,7 +57,7 @@ const problemId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, 
         description="Active research directions currently pursued at TML."
       />
       <div class="current-research-grid current-research-grid-all">
-        {currentResearch.map((item) => (
+        {researchPageItems.map((item) => (
           <CurrentResearchCard item={item} />
         ))}
       </div>

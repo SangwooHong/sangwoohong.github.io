@@ -126,6 +126,17 @@ export const currentResearch: CurrentResearch[] = [
     domainTags: ["Mechanistic Interpretability", "Data Generation"]
   },
   {
+    id: "visual-hallucination-vision-language-models",
+    title: "Visual Hallucination Reduction in Vision-Language Models",
+    koreanSummary: "Vision-language model이 생성한 각 주장이 충분하고 일관된 시각적 근거로 뒷받침되는지 검증해 visual hallucination을 줄입니다.",
+    question: "How can vision-language models verify visual evidence before accepting generated claims?",
+    image: "/assets/img/current-research/visual-hallucination-vision-language-models.png",
+    imageAlt: "Vision-language model diagram accepting visually grounded dog and bicycle claims while rejecting an unsupported red umbrella claim.",
+    layer: "Foundation Models",
+    algorithmTags: ["Robustness"],
+    domainTags: ["Vision-Language Models", "Visual Hallucination"]
+  },
+  {
     id: "verifiable-coded-computing-collusion",
     title: "Verifiable Distributed Computing Against Colluding Malicious Workers",
     koreanSummary: "분산 계산 환경에서 일부 참여자들이 서로 공모해 잘못된 결과를 내더라도 계산 결과를 검증할 수 있는 방법을 연구합니다.",
