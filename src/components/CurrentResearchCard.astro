@@ -33,6 +33,18 @@ const domainMetadata = item.domainTags?.join(" · ");
       <p class="current-research-meta" data-layer={item.layer}>{detailedMetadata}</p>
       <h3>{title}</h3>
       <p class="current-research-korean" lang="ko">{item.koreanSummary}</p>
+      {item.image && (
+        <figure class="current-research-figure">
+          <img
+            src={item.image}
+            alt={item.imageAlt ?? ""}
+            width="1672"
+            height="941"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      )}
       <p class="current-research-question">
         <span>Research Question</span>
         <strong>{item.question}</strong>
