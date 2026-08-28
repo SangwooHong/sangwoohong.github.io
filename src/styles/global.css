@@ -1,12 +1,12 @@
 :root {
   --green: #005426;
   --green-dark: #003a1d;
-  --green-soft: #edf6f0;
+  --green-soft: #f5f6f5;
   --ink: #17211b;
   --muted: #5f6f66;
   --line: #dce5df;
   --paper: #ffffff;
-  --paper-soft: #f7faf8;
+  --paper-soft: #f7f8f7;
   --max: 1120px;
 }
 
@@ -265,9 +265,9 @@ h3 {
   container-type: inline-size;
   display: grid;
   gap: 22px;
-  padding: clamp(20px, 3vw, 28px);
-  border: 1px solid var(--line);
-  border-radius: 4px;
+  padding: clamp(18px, 2.5vw, 24px) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   background: var(--paper);
 }
 
@@ -333,7 +333,7 @@ h3 {
 
 .stack-layer:last-child {
   border-bottom: 0;
-  background: var(--green-soft);
+  background: var(--paper);
 }
 
 .layer-copy {
@@ -343,7 +343,7 @@ h3 {
 }
 
 .layer-copy span,
-.algorithm-heading > div > span {
+.algorithm-copy > span {
   color: var(--green);
   font-size: 0.68rem;
   font-weight: 800;
@@ -429,7 +429,6 @@ h3 {
   min-width: 0;
   padding: 21px 18px;
   border: 1px solid var(--green);
-  border-radius: 3px;
   background: var(--green);
   color: white;
 }
@@ -499,7 +498,7 @@ h3 {
 
 .stack-diagram-compact .stack-layer {
   gap: 6px;
-  min-height: 92px;
+  min-height: 88px;
   padding: 13px 15px;
 }
 
@@ -547,21 +546,6 @@ h3 {
   font-weight: 500;
 }
 
-.framework-icon {
-  flex: 0 0 auto;
-  width: 24px;
-  height: 24px;
-  color: var(--green);
-}
-
-.layer-heading,
-.algorithm-heading {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  min-width: 0;
-}
-
 .layer-korean,
 .algorithm-korean {
   margin: 0;
@@ -574,17 +558,9 @@ h3 {
   color: var(--ink);
 }
 
-.algorithm-heading .framework-icon {
-  color: white;
-}
-
-.algorithm-heading > div {
-  min-width: 0;
-}
-
-.algorithm-heading > div > span {
+.algorithm-copy > span {
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 1px;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -595,6 +571,25 @@ h3 {
 .stack-diagram-compact .layer-korean,
 .stack-diagram-compact .algorithm-korean {
   font-size: 0.7rem;
+}
+
+.stack-heading strong,
+.layer-copy h2,
+.algorithm-copy h2,
+.current-research-card h3 {
+  text-wrap: balance;
+}
+
+.layer-korean,
+.algorithm-korean,
+.current-research-korean,
+.hero-mission-ko {
+  word-break: keep-all;
+}
+
+.layer-topics li,
+.algorithm-layer li {
+  white-space: nowrap;
 }
 
 @container (max-width: 560px) {
@@ -625,10 +620,6 @@ h3 {
   }
 }
 
-.current-research-section {
-  border-top: 3px solid var(--green);
-}
-
 .current-research-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -641,8 +632,6 @@ h3 {
   min-width: 0;
   padding: 24px;
   border: 1px solid var(--line);
-  border-top: 3px solid var(--green);
-  border-radius: 2px;
   background: var(--paper);
 }
 
@@ -1398,7 +1387,7 @@ h3 {
   }
 
   .stack-diagram {
-    padding: 12px;
+    padding: 14px 0;
   }
 
   .stack-heading {

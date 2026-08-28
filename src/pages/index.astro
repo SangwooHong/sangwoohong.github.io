@@ -7,18 +7,13 @@ import NewsList from "../components/NewsList.astro";
 import PublicationEntry from "../components/PublicationEntry.astro";
 import SectionTitle from "../components/SectionTitle.astro";
 import { homeCurrentResearch } from "../data/currentResearch";
-import { people } from "../data/people";
-import { featuredPublications, publications } from "../data/publications";
-import { getProjectsWithStatus } from "../data/projects";
-
-const members = [...people.pi, ...people.graduate, ...people.undergraduate, ...people.alumni];
-const activeProjects = getProjectsWithStatus().filter((project) => project.status === "Ongoing");
+import { featuredPublications } from "../data/publications";
 ---
 
 <BaseLayout>
   <Hero />
 
-  <section class="section current-research-section">
+  <section class="section">
     <div class="container">
       <SectionTitle
         eyebrow="Current Research"
@@ -49,18 +44,9 @@ const activeProjects = getProjectsWithStatus().filter((project) => project.statu
   </section>
 
   <section class="section">
-    <div class="container two-column">
-      <div>
-        <SectionTitle eyebrow="Latest News" title="Recent Updates" />
-        <NewsList limit={5} />
-      </div>
-      <aside class="glance">
-        <p class="eyebrow">TML at a Glance</p>
-        <div class="stat"><strong>{members.length}</strong><span>Members</span></div>
-        <div class="stat"><strong>{publications.length}</strong><span>Publications</span></div>
-        <div class="stat"><strong>{activeProjects.length}</strong><span>Active Projects</span></div>
-        <div class="stat"><strong>8 x NVIDIA B200</strong><span>Research Computing</span></div>
-      </aside>
+    <div class="container narrow">
+      <SectionTitle eyebrow="Latest News" title="Recent Updates" />
+      <NewsList limit={5} />
     </div>
   </section>
 

@@ -1,6 +1,4 @@
 ---
-import FrameworkIcon from "./FrameworkIcon.astro";
-
 interface Props {
   variant?: "compact" | "detailed";
 }
@@ -12,7 +10,6 @@ const layers = [
   {
     title: "Physical World",
     label: "Deployment",
-    icon: "physical" as const,
     korean: "현실 세계에서 동작하는 AI",
     topics: ["Autonomous Driving", "Vision-Language-Action (VLA)", "Embodied AI"],
     compactTopics: ["Autonomous Driving", "VLA", "Embodied AI"]
@@ -20,7 +17,6 @@ const layers = [
   {
     title: "Foundation Models",
     label: "Models",
-    icon: "models" as const,
     korean: "신뢰할 수 있는 파운데이션 모델",
     topics: ["LLMs", "Generative AI", "Multimodal Models"],
     compactTopics: ["LLMs", "Generative AI", "Multimodal"]
@@ -28,7 +24,6 @@ const layers = [
   {
     title: "Reliable Computing",
     label: "Computing Foundation",
-    icon: "computing" as const,
     korean: "신뢰 가능한 AI 컴퓨팅 기반",
     topics: ["Efficient Computing", "Distributed Computing", "Verifiable Computing", "Quantum / Next-Gen Computing"],
     compactTopics: ["Efficient", "Distributed", "Verifiable", "Quantum"]
@@ -52,12 +47,9 @@ const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explain
       <div class="stack-layers" aria-label="Research stack from deployment to computing foundation">
         {layers.map((layer) => (
           <section class="stack-layer">
-            <div class="layer-heading">
-              <FrameworkIcon name={layer.icon} />
-              <div class="layer-copy">
-                {!isCompact && <span>{layer.label}</span>}
-                <h2>{layer.title}</h2>
-              </div>
+            <div class="layer-copy">
+              {!isCompact && <span>{layer.label}</span>}
+              <h2>{layer.title}</h2>
             </div>
             <p class="layer-korean" lang="ko">{layer.korean}</p>
             <ul class="layer-topics">
@@ -75,20 +67,15 @@ const algorithms = ["Unlearning", "Privacy", "Robustness", "Alignment", "Explain
 
       <section class="algorithm-layer">
         <div class="algorithm-copy">
-          <div class="algorithm-heading">
-            <FrameworkIcon name="safety" />
-            <div>
-              {!isCompact && <span>Cross-Layer Pillar</span>}
-              {isCompact ? (
-                <h2 aria-label="Reliable & Safe AI Algorithms">
-                  Reliable &amp; Safe AI
-                  <small>Cross-layer algorithms</small>
-                </h2>
-              ) : (
-                <h2>Reliable &amp; Safe AI Algorithms</h2>
-              )}
-            </div>
-          </div>
+          {!isCompact && <span>Cross-Layer Pillar</span>}
+          {isCompact ? (
+            <h2 aria-label="Reliable & Safe AI Algorithms">
+              Reliable &amp; Safe AI
+              <small>Cross-layer algorithms</small>
+            </h2>
+          ) : (
+            <h2>Reliable &amp; Safe AI Algorithms</h2>
+          )}
           <p class="algorithm-korean" lang="ko">AI의 신뢰성과 안전성을 위한 알고리즘</p>
           {!isCompact && <p class="algorithm-note">Applies across all three levels</p>}
         </div>

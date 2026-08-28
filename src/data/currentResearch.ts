@@ -83,6 +83,23 @@ export const currentResearch: CurrentResearch[] = [
     question: "How should diffusion language models be pruned while preserving generation quality?",
     layer: "Foundation Models",
     domainTags: ["Diffusion Language Models", "Model Efficiency"]
+  },
+  {
+    id: "mechanistic-interpretability-data-generation",
+    title: "Mechanistic Interpretability for High-Quality LLM Data Generation",
+    koreanSummary: "Large Language Model의 학습 데이터를 생성할 때 mechanistic interpretability를 활용해 데이터의 품질을 평가하고 향상하는 방법을 연구합니다.",
+    question: "Can mechanistic interpretability guide the generation of higher-quality data for large language models?",
+    layer: "Foundation Models",
+    algorithmTags: ["Explainability"],
+    domainTags: ["Mechanistic Interpretability", "Data Generation"]
+  },
+  {
+    id: "verifiable-coded-computing-collusion",
+    title: "Verifiable Coded Computing Against Colluding Malicious Attackers",
+    koreanSummary: "코드드 컴퓨팅 환경에서 악의적인 공격자들이 서로 공모하는 경우에도 계산 결과를 검증할 수 있는 방법을 연구합니다.",
+    question: "How can coded computing remain verifiable when malicious workers collude?",
+    layer: "Reliable Computing",
+    domainTags: ["Verifiable Computing", "Coded Computing", "Colluding Attackers"]
   }
 ];
 
