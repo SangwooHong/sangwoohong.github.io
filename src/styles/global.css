@@ -714,81 +714,34 @@ h3 {
   word-break: keep-all;
 }
 
-.current-research-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin: auto 0 0;
-}
-
-.current-research-tags span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 24px;
-  padding: 2px 7px;
-  border: 1px solid var(--line);
-  border-left-width: 3px;
-  background: var(--paper);
-  font-size: 0.68rem;
-  font-weight: 800;
-  line-height: 1.3;
-  text-transform: uppercase;
-}
-
-.current-research-tags .tag-layer[data-layer="Reliable Computing"],
-.current-research-meta span[data-layer="Reliable Computing"] {
-  border-left-color: var(--layer-computing);
-  color: var(--layer-computing);
-  background: var(--layer-computing-bg);
-}
-
-.current-research-tags .tag-layer[data-layer="Foundation Models"],
-.current-research-meta span[data-layer="Foundation Models"] {
-  border-left-color: var(--layer-foundation);
-  color: var(--layer-foundation);
-  background: var(--layer-foundation-bg);
-}
-
-.current-research-tags .tag-layer[data-layer="Physical World"],
-.current-research-meta span[data-layer="Physical World"] {
-  border-left-color: var(--layer-physical);
-  color: var(--layer-physical);
-  background: var(--layer-physical-bg);
-}
-
-.current-research-tags .tag-reliability {
-  border-left-color: var(--reliability);
-  color: var(--reliability);
-}
-
+.current-research-tags,
 .current-research-meta,
 .current-research-domains {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2px 0;
   margin: 0;
-}
-
-.current-research-meta span,
-.current-research-domains span {
   color: var(--green);
   font-size: 0.7rem;
   font-weight: 800;
-  line-height: 1.4;
+  line-height: 1.45;
   text-transform: uppercase;
 }
 
-.current-research-meta span {
-  padding-left: 8px;
-  border-left: 3px solid var(--reliability);
+.current-research-tags {
+  margin-top: auto;
 }
 
-.current-research-meta span + span::before,
-.current-research-domains span + span::before {
-  content: "/";
-  margin: 0 7px;
-  color: #91a198;
-  font-weight: 500;
+.current-research-tags[data-layer="Reliable Computing"],
+.current-research-meta[data-layer="Reliable Computing"] {
+  color: var(--layer-computing);
+}
+
+.current-research-tags[data-layer="Foundation Models"],
+.current-research-meta[data-layer="Foundation Models"] {
+  color: var(--layer-foundation);
+}
+
+.current-research-tags[data-layer="Physical World"],
+.current-research-meta[data-layer="Physical World"] {
+  color: var(--layer-physical);
 }
 
 .current-research-card h3 {
@@ -829,7 +782,7 @@ h3 {
   margin-top: 16px;
 }
 
-.current-research-domains span {
+.current-research-domains {
   color: var(--muted);
   text-transform: none;
 }
@@ -1475,7 +1428,7 @@ h3 {
 }
 
 .support-grid {
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .compact-support-grid {
@@ -1738,9 +1691,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .current-research-tags {
-    gap: 6px;
-  }
 
   .join-block,
   .join-panel {

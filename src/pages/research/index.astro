@@ -5,8 +5,13 @@ import ResearchStackFigure from "../../components/ResearchStackFigure.astro";
 import RepresentativePaper from "../../components/RepresentativePaper.astro";
 import SectionTitle from "../../components/SectionTitle.astro";
 import { currentResearch, getCurrentResearchByAlgorithm } from "../../data/currentResearch";
-import { getPublicationsByAlgorithm, getRepresentativePublications } from "../../data/publications";
+import { getPublicationsByAlgorithm, getRepresentativePublications, type Publication } from "../../data/publications";
 import { reliabilityProblems, researchAreas } from "../../data/research";
+
+const uniquePublications = (publications: Publication[]) =>
+  publications.filter((publication, index, list) => list.findIndex((item) => item.id === publication.id) === index);
+
+const problemId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 ---
 
 <BaseLayout title="Research">
@@ -82,11 +87,11 @@ import { reliabilityProblems, researchAreas } from "../../data/research";
       />
       <div class="reliability-problem-list">
         {reliabilityProblems.map((problem) => {
-          const relatedResearch = getCurrentResearchByAlgorithm(problem.title);
-          const relatedPublications = getPublicationsByAlgorithm(problem.title);
+          const relatedResearch = problem.tags.flatMap((tag) => getCurrentResearchByAlgorithm(tag)).filter((item, index, list) => list.findIndex((candidate) => candidate.id === item.id) === index);
+          const relatedPublications = uniquePublications(problem.tags.flatMap((tag) => getPublicationsByAlgorithm(tag)));
 
           return (
-            <article class="reliability-problem" id={problem.title.toLowerCase()}>
+            <article class="reliability-problem" id={problemId(problem.title)}>
               <header>
                 <p class="eyebrow">Cross-Layer Problem</p>
                 <h2>{problem.title}</h2>

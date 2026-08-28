@@ -14,7 +14,6 @@ const publication = Astro.props.publication;
       <span>{publication.venueShort}</span>
       <span>{publication.layer}</span>
       {publication.algorithmTags?.map((tag) => <span>{tag}</span>)}
-      {publication.featured && <span>Selected</span>}
     </div>
     <h3>{publication.title}</h3>
     <p class="authors">{publication.authors}</p>

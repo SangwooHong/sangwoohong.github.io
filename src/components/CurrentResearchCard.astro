@@ -1,5 +1,6 @@
 ---
 import type { CurrentResearch } from "../data/currentResearch";
+import type { ReliabilityProblem } from "../data/publications";
 
 interface Props {
   item: CurrentResearch;
@@ -9,7 +10,16 @@ interface Props {
 const { item, variant = "detailed" } = Astro.props;
 const isHome = variant === "home";
 const title = isHome ? (item.homepageTitle ?? item.shortTitle ?? item.title) : item.title;
-const researchLabels = [item.layer, ...(item.algorithmTags ?? [])];
+const formatReliabilityLabel = (tag: ReliabilityProblem) => {
+  if (tag === "Privacy" || tag === "Unlearning") return "Privacy & Unlearning";
+  if (tag === "Alignment" || tag === "Explainability") return "Alignment & Explainability";
+  return tag;
+};
+const reliabilityLabels = [...new Set((item.algorithmTags ?? []).map(formatReliabilityLabel))];
+const researchLabels = [item.layer, ...reliabilityLabels];
+const homeMetadata = researchLabels.join(" · ");
+const detailedMetadata = researchLabels.join(" · ");
+const domainMetadata = item.domainTags?.join(" · ");
 ---
 
 <article class:list={["current-research-card", isHome && "current-research-card-home"]} id={`current-${item.id}`}>
@@ -18,27 +28,18 @@ const researchLabels = [item.layer, ...(item.algorithmTags ?? [])];
       <p class="current-research-keyword">{item.displayKeyword}</p>
       <h3>{title}</h3>
       <p class="current-research-home-question" lang="ko">{item.homepageQuestionKo}</p>
-      <div class="current-research-tags" aria-label="Research metadata">
-        <span class="tag-layer" data-layer={item.layer}>{item.layer}</span>
-        {item.algorithmTags?.map((tag) => <span class="tag-reliability">{tag}</span>)}
-      </div>
+      <p class="current-research-tags" aria-label="Research metadata" data-layer={item.layer}>{homeMetadata}</p>
     </>
   ) : (
     <>
-      <p class="current-research-meta">
-        {researchLabels.map((label) => <span data-layer={label}>{label}</span>)}
-      </p>
+      <p class="current-research-meta" data-layer={item.layer}>{detailedMetadata}</p>
       <h3>{title}</h3>
       <p class="current-research-korean" lang="ko">{item.koreanSummary}</p>
       <p class="current-research-question">
         <span>Research Question</span>
         <strong>{item.question}</strong>
       </p>
-      {item.domainTags && item.domainTags.length > 0 && (
-        <p class="current-research-domains">
-          {item.domainTags.map((tag) => <span>{tag}</span>)}
-        </p>
-      )}
+      {domainMetadata && <p class="current-research-domains">{domainMetadata}</p>}
     </>
   )}
 </article>

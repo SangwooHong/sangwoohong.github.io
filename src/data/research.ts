@@ -40,33 +40,30 @@ export const researchAreas: ResearchArea[] = [
 ];
 
 export interface ReliabilityProblemDefinition {
-  title: ReliabilityProblem;
+  title: string;
+  tags: ReliabilityProblem[];
   koreanQuestion: string;
 }
 
 export const reliabilityProblems: ReliabilityProblemDefinition[] = [
   {
-    title: "Unlearning",
-    koreanQuestion: "학습된 정보를 선택적으로 제거하면서 모델의 성능을 어떻게 유지할 수 있을까?"
-  },
-  {
-    title: "Privacy",
-    koreanQuestion: "학습 데이터와 모델에 포함된 민감한 정보를 어떻게 보호할 수 있을까?"
+    title: "Privacy & Unlearning",
+    tags: ["Privacy", "Unlearning"],
+    koreanQuestion: "민감한 정보를 보호하고 학습된 정보를 선택적으로 제거하면서 모델 성능을 어떻게 유지할 수 있을까?"
   },
   {
     title: "Robustness",
+    tags: ["Robustness"],
     koreanQuestion: "Shortcut, spurious correlation, distribution shift에도 모델이 안정적으로 동작하게 할 수 있을까?"
   },
   {
     title: "Fairness",
+    tags: ["Fairness"],
     koreanQuestion: "데이터와 모델의 편향을 줄이고 공정한 판단을 어떻게 유도할 수 있을까?"
   },
   {
-    title: "Alignment",
-    koreanQuestion: "AI의 행동을 인간의 선호와 의도에 어떻게 맞출 수 있을까?"
-  },
-  {
-    title: "Explainability",
-    koreanQuestion: "AI가 어떤 근거로 판단하는지 어떻게 이해하고 검증할 수 있을까?"
+    title: "Alignment & Explainability",
+    tags: ["Alignment", "Explainability"],
+    koreanQuestion: "AI의 행동을 인간의 의도에 맞추고 판단 근거를 어떻게 이해할 수 있을까?"
   }
 ];
