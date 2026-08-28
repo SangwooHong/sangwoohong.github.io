@@ -10,12 +10,14 @@ const publication = Astro.props.publication;
 
 {publication.links?.paper ? (
   <a href={publication.links.paper} class="paper-link">
-    <span>{`${publication.venueShort} · ${publication.year}`}</span>
-    <strong>{publication.title}</strong>
+    <span class="paper-link-meta">{`${publication.venueShort} · ${publication.year}`}</span>
+    <br />
+    <strong class="paper-link-title">{publication.title}</strong>
   </a>
 ) : (
   <div class="paper-link paper-link-static">
-    <span>{`${publication.venueShort} · ${publication.year}`}</span>
-    <strong>{publication.title}</strong>
+    <span class="paper-link-meta">{`${publication.venueShort} · ${publication.year}`}</span>
+    <br />
+    <strong class="paper-link-title">{publication.title}</strong>
   </div>
 )}

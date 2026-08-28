@@ -738,9 +738,7 @@ h3 {
 }
 
 .paper-link {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  row-gap: 7px;
+  display: block;
   min-width: 0;
   padding: 10px 0;
   border-top: 1px solid rgba(220, 229, 223, 0.78);
@@ -748,22 +746,22 @@ h3 {
   text-decoration: none;
 }
 
-.paper-link span {
-  display: block;
+.paper-link-meta {
   color: var(--green);
   font-size: 0.76rem;
   font-weight: 800;
   line-height: 1.35;
 }
 
-.paper-link strong {
-  display: block;
+.paper-link-title {
+  display: inline-block;
+  margin-top: 7px;
   color: var(--ink);
   font-size: 0.92rem;
   line-height: 1.28;
 }
 
-.paper-link:hover strong {
+.paper-link:hover .paper-link-title {
   color: var(--green);
   text-decoration: underline;
 }
