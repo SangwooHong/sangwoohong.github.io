@@ -15,11 +15,7 @@ import { featuredPublications } from "../data/publications";
 
   <section class="section muted">
     <div class="container">
-      <SectionTitle
-        eyebrow="Featured Publications"
-        title="Reliability Across the AI Stack"
-        description="Representative publications across Foundation Models, Reliable & Safe AI Algorithms, and the Physical World."
-      />
+      <SectionTitle eyebrow="Featured Publications" title="주요 연구 성과" />
       <div class="feature-grid">
         {featuredPublications.slice(0, 3).map((publication) => (
           <PublicationEntry publication={publication} />
@@ -30,11 +26,7 @@ import { featuredPublications } from "../data/publications";
 
   <section class="section">
     <div class="container">
-      <SectionTitle
-        eyebrow="Current Research"
-        title="Current Research Directions"
-        description="Core research questions currently shaping TML's work."
-      />
+      <SectionTitle eyebrow="Current Research" title="현재 진행 중인 연구" />
       <div class="current-research-grid current-research-grid-home">
         {homeCurrentResearch.map((item) => (
           <CurrentResearchCard item={item} variant="home" />

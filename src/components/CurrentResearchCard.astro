@@ -17,7 +17,6 @@ const formatReliabilityLabel = (tag: ReliabilityProblem) => {
 };
 const reliabilityLabels = [...new Set((item.algorithmTags ?? []).map(formatReliabilityLabel))];
 const researchLabels = [item.layer, ...reliabilityLabels];
-const homeMetadata = researchLabels.join(" · ");
 const detailedMetadata = researchLabels.join(" · ");
 const domainMetadata = item.domainTags?.join(" · ");
 ---
@@ -28,7 +27,6 @@ const domainMetadata = item.domainTags?.join(" · ");
       <p class="current-research-keyword">{item.displayKeyword}</p>
       <h3>{title}</h3>
       <p class="current-research-home-question" lang="ko">{item.homepageQuestionKo}</p>
-      <p class="current-research-tags" aria-label="Research metadata" data-layer={item.layer}>{homeMetadata}</p>
     </>
   ) : (
     <>
