@@ -15,6 +15,7 @@ const project = Astro.props.project;
   <h3>{project.title}</h3>
   {project.originalTitle && <p class="original-title">{project.originalTitle}</p>}
   <p class="agency">{project.agency}</p>
+  {project.role && <p class="project-role">{project.role}</p>}
   <p>{project.description}</p>
   <div class="tag-row">
     {project.themes.map((theme) => <span>{theme}</span>)}

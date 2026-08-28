@@ -4,6 +4,7 @@ export interface Project {
   title: string;
   originalTitle?: string;
   agency: string;
+  role?: string;
   startDate: string;
   endDate: string;
   themes: string[];
@@ -25,6 +26,17 @@ export const projects: Project[] = [
     themes: ["Infrastructure", "Foundation Models", "GPU Computing"],
     description:
       "Confirmed research computing support with access to eight NVIDIA B200 GPUs for AI research workloads."
+  },
+  {
+    title: "AI Star Fellowship: Deepfake Defense and Agent Authentication",
+    originalTitle: "AI스타펠로우십지원(제주대학교, 학제연계형)",
+    agency: "Jeju National University (lead), Konkuk University, NC AI, Metsakuur Company, AIVIS",
+    role: "Prof. Sangwoo Hong serves as Project 2 Leader.",
+    startDate: "2026-07-01",
+    endDate: "2031-12-31",
+    themes: ["Trustworthy AI", "Deepfake Defense", "Agent Authentication"],
+    description:
+      "Konkuk's Project 2 studies proactive defense for AI video-call-based multi-unit deepfakes and authentication technologies for AI agents."
   },
   {
     title: "Global Talent Development in Copyright Technology",

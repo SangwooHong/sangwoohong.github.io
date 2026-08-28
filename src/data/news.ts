@@ -14,7 +14,7 @@ export const news: NewsItem[] = [
   },
   {
     date: "2026-07",
-    text: "Our team has been selected for the AI Star Fellowship 2026 in collaboration with Jeju National University, NC AI, AIVIS, and Metsakuur. Prof. Hong will serve as the PI of Project 2, focusing on proactive security against multi-unit deepfakes and secure authentication of AI agents. The six-year project has total funding of KRW 11.0 billion."
+    text: "Our team has been selected for the AI Star Fellowship 2026 in collaboration with Jeju National University, NC AI, AIVIS, and Metsakuur. Prof. Hong will serve as Project 2 Leader, focusing on proactive security against multi-unit deepfakes and secure authentication of AI agents. The six-year project has total funding of KRW 11.0 billion."
   },
   {
     date: "2026-07",

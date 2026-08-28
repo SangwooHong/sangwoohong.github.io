@@ -85,14 +85,6 @@ export const currentResearch: CurrentResearch[] = [
     featuredOnHome: true
   },
   {
-    id: "explainable-autonomous-driving",
-    title: "Explainable Decision-Making for Autonomous Driving",
-    koreanSummary: "자율주행 AI의 판단 근거를 설명하고 검증하는 방법을 연구합니다.",
-    question: "How can we understand and verify why autonomous-driving models make particular decisions?",
-    layer: "Physical World",
-    algorithmTags: ["Explainability"]
-  },
-  {
     id: "data-informed-quantum-kernels",
     title: "Data-Informed Quantum Kernels for Time-Series Forecasting",
     koreanSummary: "시계열 데이터의 구조적 특성을 inductive bias로 반영한 양자 커널을 설계합니다.",
@@ -119,11 +111,11 @@ export const currentResearch: CurrentResearch[] = [
   },
   {
     id: "verifiable-coded-computing-collusion",
-    title: "Verifiable Coded Computing Against Colluding Malicious Attackers",
-    koreanSummary: "코드드 컴퓨팅 환경에서 악의적인 공격자들이 서로 공모하는 경우에도 계산 결과를 검증할 수 있는 방법을 연구합니다.",
-    question: "How can coded computing remain verifiable when malicious workers collude?",
+    title: "Verifiable Distributed Computing Against Colluding Malicious Workers",
+    koreanSummary: "분산 계산 환경에서 일부 참여자들이 서로 공모해 잘못된 결과를 내더라도 계산 결과를 검증할 수 있는 방법을 연구합니다.",
+    question: "How can distributed computation remain verifiable when malicious workers collude?",
     layer: "Reliable Computing",
-    domainTags: ["Verifiable Computing", "Coded Computing", "Colluding Attackers"]
+    domainTags: ["Verifiable Computing", "Distributed Computing", "Secure AI Computation"]
   }
 ];
 
