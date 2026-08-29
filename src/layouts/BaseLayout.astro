@@ -22,6 +22,15 @@ const description = Astro.props.description ?? site.description;
     <title>{pageTitle}</title>
     <link rel="icon" type="image/png" href="/assets/img/brand/small_logo.png" />
     <link rel="apple-touch-icon" href="/assets/img/brand/small_logo.png" />
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-Z8H4RQ78T3"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Z8H4RQ78T3");
+    </script>
   </head>
   <body>
     <Header />
