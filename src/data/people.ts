@@ -69,5 +69,17 @@ export const people = {
       image: "/assets/img/people/kangmin-kim.png"
     }
   ],
+  interns: [
+    {
+      name: "Gyeonghwan Shin",
+      role: "Research Intern",
+      image: "/assets/img/people/gyeonghwan-shin.png"
+    },
+    {
+      name: "Mingyu Jang",
+      role: "Research Intern",
+      image: "/assets/img/people/mingyu-jang.png"
+    }
+  ],
   alumni: []
 };
