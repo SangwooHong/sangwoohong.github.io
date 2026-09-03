@@ -25,9 +25,6 @@ import { people } from "../../data/people";
       <SectionTitle title="Undergraduate Researchers" />
       <div class="person-grid">{people.undergraduate.map((person) => <PersonCard person={person} />)}</div>
 
-      <SectionTitle title="Research Interns" />
-      <div class="person-grid">{people.interns.map((person) => <PersonCard person={person} />)}</div>
-
       {people.alumni.length > 0 && (
         <>
           <SectionTitle title="Alumni" />

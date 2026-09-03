@@ -67,17 +67,17 @@ export const people = {
       affiliation: "Department of Computer Science and Engineering",
       currentResearchIds: ["shortcut-bias-autonomous-driving"],
       image: "/assets/img/people/kangmin-kim.png"
-    }
-  ],
-  interns: [
+    },
     {
       name: "Gyeonghwan Shin",
-      role: "Research Intern",
+      role: "Undergraduate Student",
+      affiliation: "Department of Computer Science and Engineering",
       image: "/assets/img/people/gyeonghwan-shin.png"
     },
     {
       name: "Mingyu Jang",
-      role: "Research Intern",
+      role: "Undergraduate Student",
+      affiliation: "Department of Computer Science and Engineering",
       image: "/assets/img/people/mingyu-jang.png"
     }
   ],
