@@ -79,6 +79,12 @@ export const people = {
       role: "Undergraduate Student",
       affiliation: "Department of Computer Science and Engineering",
       image: "/assets/img/people/mingyu-jang.png"
+    },
+    {
+      name: "Taewoo Kwon",
+      role: "Undergraduate Student",
+      affiliation: "Department of Computer Science and Engineering",
+      image: "/assets/img/people/taewoo-kwon.png"
     }
   ],
   alumni: []
