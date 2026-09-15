@@ -5,6 +5,10 @@ export interface NewsItem {
 
 export const news: NewsItem[] = [
   {
+    date: "2026-09",
+    text: "Our lab has added two additional NVIDIA RTX PRO 6000 GPUs to its research computing infrastructure."
+  },
+  {
     date: "2026-08",
     text: "Our paper, Function-Level Execution Feedback for Code Preference Optimization, has been accepted to EMNLP 2026 Findings."
   },
