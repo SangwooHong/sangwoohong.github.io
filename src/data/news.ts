@@ -10,6 +10,10 @@ export const news: NewsItem[] = [
   },
   {
     date: "2026-08",
+    text: "Our paper, Mechanistic Circuit Identification for Controllable Data Generation, is now available on arXiv. It analyzes and steers model-internal circuits to improve the quality and controllability of LLM-generated training data."
+  },
+  {
+    date: "2026-08",
     text: "Our paper, Function-Level Execution Feedback for Code Preference Optimization, has been accepted to EMNLP 2026 Findings."
   },
   {

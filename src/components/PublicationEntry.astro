@@ -18,6 +18,7 @@ const publication = Astro.props.publication;
     <h3>{publication.title}</h3>
     <p class="authors">{publication.authors}</p>
     <p>{publication.venue}, {publication.year}</p>
+    {publication.summary && <p class="publication-summary">{publication.summary}</p>}
     <div class="entry-links">
       {publication.links?.paper && <a href={publication.links.paper}>Paper</a>}
       {publication.links?.code && <a href={publication.links.code}>Code</a>}

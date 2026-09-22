@@ -26,12 +26,29 @@ export interface Publication {
     code?: string;
     project?: string;
   };
+  summary?: string;
   note?: string;
   featured?: boolean;
   representativeFor?: ResearchLayer[];
 }
 
 export const publications: Publication[] = [
+  {
+    id: "mechanistic-circuit-controllable-data-generation",
+    title: "Mechanistic Circuit Identification for Controllable Data Generation",
+    authors: "Nakyung Lee, Sangwoo Hong, Jungwoo Lee",
+    venue: "arXiv preprint",
+    year: 2026,
+    layer: "Foundation Models",
+    algorithmTags: ["Explainability"],
+    venueShort: "arXiv",
+    image: "/assets/img/current-research/mechanistic-interpretability-data-generation.png",
+    links: {
+      paper: "https://arxiv.org/abs/2608.24065"
+    },
+    summary: "Identifies model-internal circuits associated with data utility and steers them to generate higher-quality, controllable training data for language models.",
+    note: "Preprint"
+  },
   {
     id: "function-level-execution-feedback",
     title: "Function-Level Execution Feedback for Code Preference Optimization",
