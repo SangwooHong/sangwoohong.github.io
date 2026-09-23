@@ -34,6 +34,22 @@ export interface Publication {
 
 export const publications: Publication[] = [
   {
+    id: "mitigating-sequential-reappearance",
+    title: "Mitigating Sequential Reappearance in Diffusion Data-Point Unlearning",
+    authors: "Donghyun Kim, Taehyuk Lee, Jinyeong Kim, Youngmin Oh, Dohyeong Kim, Jaehyuk Ryu, Sangwoo Hong",
+    venue: "arXiv preprint",
+    year: 2026,
+    layer: "Foundation Models",
+    algorithmTags: ["Unlearning"],
+    venueShort: "arXiv",
+    image: "/assets/img/current-research/sequential-machine-unlearning.png",
+    links: {
+      paper: "https://arxiv.org/abs/2609.25166"
+    },
+    summary: "Studies sequential reappearance in diffusion data-point unlearning and how deleted instances can remain forgotten across repeated unlearning requests.",
+    note: "Preprint"
+  },
+  {
     id: "mechanistic-circuit-controllable-data-generation",
     title: "Mechanistic Circuit Identification for Controllable Data Generation",
     authors: "Nakyung Lee, Sangwoo Hong, Jungwoo Lee",

@@ -6,6 +6,10 @@ export interface NewsItem {
 export const news: NewsItem[] = [
   {
     date: "2026-09",
+    text: "Our paper, Mitigating Sequential Reappearance in Diffusion Data-Point Unlearning, coauthored with TML students at Konkuk University, is now available on arXiv. It studies how to prevent deleted instances from reappearing across sequential unlearning requests."
+  },
+  {
+    date: "2026-09",
     text: "Our lab has added two additional NVIDIA RTX PRO 6000 GPUs to its research computing infrastructure."
   },
   {
