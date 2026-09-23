@@ -12,14 +12,14 @@ export const people = {
   graduate: [
     {
       name: "Hyungjoo Ahn",
-      role: "Lab Leader / Master's Program",
+      role: "Lab Leader / Incoming Master's Student",
       interests: "Autonomous Driving",
       currentResearchIds: ["shortcut-bias-autonomous-driving"],
       image: "/assets/img/people/hyungjoo-ahn.png"
     },
     {
       name: "Jinyoung Kim",
-      role: "Integrated M.S.-Ph.D. Program",
+      role: "Incoming Integrated M.S.-Ph.D. Student",
       interests: "Machine Unlearning, Model Collapse",
       currentResearchIds: ["sequential-machine-unlearning"],
       github: "https://github.com/jinzer0",
@@ -27,28 +27,28 @@ export const people = {
     },
     {
       name: "Youngmin Oh",
-      role: "Integrated M.S.-Ph.D. Program",
+      role: "Incoming Integrated M.S.-Ph.D. Student",
       interests: "Machine Unlearning, Model Collapse",
       currentResearchIds: ["sequential-machine-unlearning"],
       image: "/assets/img/people/youngmin-oh.png"
     },
     {
       name: "Donghyun Kim",
-      role: "Integrated M.S.-Ph.D. Program",
+      role: "Incoming Integrated M.S.-Ph.D. Student",
       interests: "Machine Unlearning, Autonomous Driving",
       currentResearchIds: ["sequential-machine-unlearning"],
       image: "/assets/img/people/donghyun-kim.png"
     },
     {
       name: "Jaehyuk Yu",
-      role: "Master's Program",
+      role: "Incoming Master's Student",
       interests: "Multi-Agent System, Autonomous Driving",
       currentResearchIds: ["multi-agent-hallucination-detection"],
       image: "/assets/img/people/jaehyuk-yu.png"
     },
     {
       name: "Jinhyuk Moon",
-      role: "Master's Program",
+      role: "Incoming Master's Student",
       interests: "Quantum Machine Learning",
       currentResearchIds: ["qng-accelerated-quantum-optimization"],
       image: "/assets/img/people/jinhyuk-moon.png"
