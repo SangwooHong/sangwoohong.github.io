@@ -47,7 +47,8 @@ export const publications: Publication[] = [
       paper: "https://arxiv.org/abs/2609.25166"
     },
     summary: "Studies sequential reappearance in diffusion data-point unlearning and how deleted instances can remain forgotten across repeated unlearning requests.",
-    note: "Preprint"
+    note: "Preprint",
+    featured: true
   },
   {
     id: "mechanistic-circuit-controllable-data-generation",
@@ -62,7 +63,8 @@ export const publications: Publication[] = [
     links: {
       paper: "https://arxiv.org/abs/2608.24065"
     },
-    summary: "Identifies model-internal circuits associated with data utility and steers them to generate higher-quality, controllable training data for language models."
+    summary: "Identifies model-internal circuits associated with data utility and steers them to generate higher-quality, controllable training data for language models.",
+    featured: true
   },
   {
     id: "function-level-execution-feedback",
@@ -119,7 +121,6 @@ export const publications: Publication[] = [
     links: {
       paper: "https://aclanthology.org/2026.acl-long.1744/"
     },
-    featured: true,
     representativeFor: ["Foundation Models"]
   },
   {
@@ -135,7 +136,6 @@ export const publications: Publication[] = [
     links: {
       paper: "https://doi.org/10.1109/TIP.2026.3687070"
     },
-    featured: true,
     representativeFor: ["Foundation Models"]
   },
   {
