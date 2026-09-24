@@ -53,17 +53,16 @@ export const publications: Publication[] = [
     id: "mechanistic-circuit-controllable-data-generation",
     title: "Mechanistic Circuit Identification for Controllable Data Generation",
     authors: "Nakyung Lee, Sangwoo Hong, Jungwoo Lee",
-    venue: "arXiv preprint",
-    year: 2026,
+    venue: "The Forty-first Annual Conference on Neural Information Processing Systems",
+    year: 2027,
     layer: "Foundation Models",
     algorithmTags: ["Explainability"],
-    venueShort: "arXiv",
+    venueShort: "NeurIPS",
     image: "/assets/img/current-research/mechanistic-interpretability-data-generation.png",
     links: {
       paper: "https://arxiv.org/abs/2608.24065"
     },
-    summary: "Identifies model-internal circuits associated with data utility and steers them to generate higher-quality, controllable training data for language models.",
-    note: "Preprint"
+    summary: "Identifies model-internal circuits associated with data utility and steers them to generate higher-quality, controllable training data for language models."
   },
   {
     id: "function-level-execution-feedback",

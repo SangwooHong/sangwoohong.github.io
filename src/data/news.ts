@@ -6,6 +6,10 @@ export interface NewsItem {
 export const news: NewsItem[] = [
   {
     date: "2026-09",
+    text: "Our paper, Mechanistic Circuit Identification for Controllable Data Generation, has been accepted to NeurIPS 2027."
+  },
+  {
+    date: "2026-09",
     text: "Our paper, Mitigating Sequential Reappearance in Diffusion Data-Point Unlearning, coauthored with TML students at Konkuk University, is now available on arXiv. It studies how to prevent deleted instances from reappearing across sequential unlearning requests."
   },
   {
