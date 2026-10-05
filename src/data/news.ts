@@ -5,6 +5,10 @@ export interface NewsItem {
 
 export const news: NewsItem[] = [
   {
+    date: "2026-10",
+    text: "TML joined Jeju National University for the AI Star Fellowship project workshop at Camphortree Hotel, Jeju, from October 1–3, 2026."
+  },
+  {
     date: "2026-09",
     text: "Our paper, Mechanistic Circuit Identification for Controllable Data Generation, has been accepted to NeurIPS 2026."
   },

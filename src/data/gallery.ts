@@ -3,8 +3,55 @@ export interface GalleryItem {
   alt: string;
   caption?: string;
   source: string;
-  acquisition: "download" | "screenshot";
+  acquisition: "download" | "screenshot" | "provided";
 }
+
+export interface GalleryEvent {
+  title: string;
+  description: string;
+  meta: string;
+  items: GalleryItem[];
+}
+
+export const galleryEvents: GalleryEvent[] = [
+  {
+    title: "AI Star Fellowship Workshop",
+    description: "TML joined Jeju National University for the AI Star Fellowship project workshop and team activities in Jeju.",
+    meta: "Camphortree Hotel, Jeju · October 1–3, 2026",
+    items: [
+      {
+        src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-01.jpg",
+        alt: "TML members in a flower field during the AI Star Fellowship workshop in Jeju",
+        source: "TML",
+        acquisition: "provided"
+      },
+      {
+        src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-02.jpg",
+        alt: "TML members visiting a citrus orchard during workshop team activities in Jeju",
+        source: "TML",
+        acquisition: "provided"
+      },
+      {
+        src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-03.jpg",
+        alt: "TML members standing together by the coast in Jeju",
+        source: "TML",
+        acquisition: "provided"
+      },
+      {
+        src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-04.jpg",
+        alt: "TML members taking a group selfie by the coast in Jeju",
+        source: "TML",
+        acquisition: "provided"
+      },
+      {
+        src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-05.jpg",
+        alt: "TML members during team activities near Camphortree Hotel in Jeju",
+        source: "TML",
+        acquisition: "provided"
+      }
+    ]
+  }
+];
 
 export const galleryItems: GalleryItem[] = [
   {

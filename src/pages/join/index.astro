@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { galleryItems } from "../../data/gallery";
+import { galleryEvents, galleryItems } from "../../data/gallery";
 import { site } from "../../data/site";
 ---
 
@@ -72,9 +72,24 @@ import { site } from "../../data/site";
         </div>
       </section>
 
-      <section class="join-block join-block-wide gallery-section">
+      <section class="join-block join-block-wide gallery-section" id="lab-life" style="scroll-margin-top: 96px;">
         <p class="eyebrow">Lab Life / Gallery</p>
-        <h2>연구실 활동</h2>
+        <h2>Lab Activities</h2>
+        {galleryEvents.map((event) => (
+          <section aria-label={event.title}>
+            <h3>{event.title}</h3>
+            <p>{event.description}</p>
+            <p class="support-note">{event.meta}</p>
+            <div class="gallery-grid">
+              {event.items.map((item, index) => (
+                <figure class="gallery-item" style={index === 0 ? "grid-column: 1 / -1;" : undefined}>
+                  <img src={item.src} alt={item.alt} loading="lazy" />
+                </figure>
+              ))}
+            </div>
+          </section>
+        ))}
+        <h3>More Lab Life</h3>
         <div class="gallery-grid">
           {galleryItems.map((item) => (
             <figure class="gallery-item">
