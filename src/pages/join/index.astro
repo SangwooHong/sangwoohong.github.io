@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import GalleryCarousel from "../../components/GalleryCarousel.astro";
-import { galleryEvents, galleryItems } from "../../data/gallery";
+import { awardItems, galleryEvents } from "../../data/gallery";
 import { site } from "../../data/site";
 ---
 
@@ -75,7 +75,7 @@ import { site } from "../../data/site";
 
       <section class="join-block join-block-wide gallery-section" id="lab-life" style="scroll-margin-top: 96px;">
         <p class="eyebrow">Lab Life / Gallery</p>
-        <h2>Lab Activities</h2>
+        <h2>Lab Activities & Awards</h2>
         {galleryEvents.map((event) => (
           <section class="gallery-collection" aria-label={event.title}>
             <h3>{event.title}</h3>
@@ -84,9 +84,9 @@ import { site } from "../../data/site";
             <GalleryCarousel items={event.items} label={`${event.title} photo thumbnails`} />
           </section>
         ))}
-        <section class="gallery-collection" aria-label="More Lab Life">
-          <h3>More Lab Life</h3>
-          <GalleryCarousel items={galleryItems} label="More lab life photo thumbnails" />
+        <section class="gallery-collection" aria-label="Awards">
+          <h3>Awards</h3>
+          <GalleryCarousel items={awardItems} label="Award photo thumbnails" />
         </section>
       </section>
     </div>
