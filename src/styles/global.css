@@ -1207,6 +1207,101 @@ h3 {
   font-weight: 650;
 }
 
+.gallery-carousel {
+  margin-top: 20px;
+}
+
+.gallery-carousel-stage {
+  width: min(100%, 720px);
+  margin: 0 auto;
+}
+
+.gallery-slide {
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+}
+
+.gallery-slide[hidden] {
+  display: none;
+}
+
+.gallery-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gallery-carousel-controls {
+  display: grid;
+  grid-template-columns: 40px minmax(64px, auto) 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.gallery-carousel-button {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
+.gallery-carousel-button:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.gallery-carousel-count {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.gallery-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  width: min(100%, 960px);
+  margin: 14px auto 0;
+}
+
+.gallery-thumbnail {
+  aspect-ratio: 4 / 3;
+  min-width: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--paper-soft);
+  cursor: pointer;
+}
+
+.gallery-thumbnail[aria-pressed="true"] {
+  border-color: var(--green);
+  outline: 2px solid color-mix(in srgb, var(--green) 18%, transparent);
+  outline-offset: 2px;
+}
+
+.gallery-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .person-interests {
   margin-bottom: 12px;
 }
@@ -1356,6 +1451,23 @@ h3 {
   .process-list li,
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-carousel-stage {
+    width: 100%;
+  }
+
+  .gallery-thumbnails {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 3px 2px 8px;
+    scroll-snap-type: x proximity;
+  }
+
+  .gallery-thumbnail {
+    flex: 0 0 96px;
+    scroll-snap-align: start;
   }
 
 

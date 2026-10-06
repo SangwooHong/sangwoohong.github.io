@@ -20,6 +20,18 @@ export const galleryEvents: GalleryEvent[] = [
     meta: "Camphortree Hotel, Jeju · October 1–3, 2026",
     items: [
       {
+        src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-kickoff-group.jpg",
+        alt: "Participants at the 2026 AI Star Fellowship kickoff workshop in Jeju",
+        source: "TML",
+        acquisition: "provided"
+      },
+      {
+        src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-session.jpg",
+        alt: "AI Star Fellowship kickoff workshop session at Camphortree Hotel in Jeju",
+        source: "TML",
+        acquisition: "provided"
+      },
+      {
         src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-01.jpg",
         alt: "TML members in a flower field during the AI Star Fellowship workshop in Jeju",
         source: "TML",
