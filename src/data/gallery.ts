@@ -16,7 +16,7 @@ export interface GalleryEvent {
 export const galleryEvents: GalleryEvent[] = [
   {
     title: "AI Star Fellowship Workshop",
-    description: "TML joined Jeju National University for the AI Star Fellowship project workshop and team activities in Jeju.",
+    description: "TML participated in the 2026 AI Star Fellowship Kickoff Workshop with Jeju National University in Jeju.",
     meta: "Camphortree Hotel, Jeju · October 1–3, 2026",
     items: [
       {
