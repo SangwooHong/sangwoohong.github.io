@@ -22,42 +22,49 @@ export const galleryEvents: GalleryEvent[] = [
       {
         src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-kickoff-group.jpg",
         alt: "Participants at the 2026 AI Star Fellowship kickoff workshop in Jeju",
+        caption: "AI Star Fellowship Kickoff Workshop",
         source: "TML",
         acquisition: "provided"
       },
       {
         src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-session.jpg",
         alt: "AI Star Fellowship kickoff workshop session at Camphortree Hotel in Jeju",
+        caption: "Workshop Session",
         source: "TML",
         acquisition: "provided"
       },
       {
         src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-01.jpg",
         alt: "TML members in a flower field during the AI Star Fellowship workshop in Jeju",
+        caption: "Team Activity in Jeju",
         source: "TML",
         acquisition: "provided"
       },
       {
         src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-02.jpg",
         alt: "TML members visiting a citrus orchard during workshop team activities in Jeju",
+        caption: "Citrus Orchard Visit",
         source: "TML",
         acquisition: "provided"
       },
       {
         src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-03.jpg",
         alt: "TML members standing together by the coast in Jeju",
+        caption: "Jeju Coast",
         source: "TML",
         acquisition: "provided"
       },
       {
         src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-04.jpg",
         alt: "TML members taking a group selfie by the coast in Jeju",
+        caption: "Jeju Coast",
         source: "TML",
         acquisition: "provided"
       },
       {
         src: "/assets/img/gallery/ai-star-fellowship-workshop-jeju-2026-05.jpg",
         alt: "TML members during team activities near Camphortree Hotel in Jeju",
+        caption: "Camphortree Hotel",
         source: "TML",
         acquisition: "provided"
       }
