@@ -6,7 +6,7 @@ export interface NewsItem {
 export const news: NewsItem[] = [
   {
     date: "2026-10",
-    text: "Our paper, From Token Correction to Claim Admission: Training-Free Hallucination Mitigation for Large Vision-Language Models, is now available on arXiv. It introduces evidence-guided claim admission to reduce visual hallucination without additional training."
+    text: "Our paper, From Token Correction to Claim Admission: Training-Free Hallucination Mitigation for Large Vision-Language Models, is now available on arXiv."
   },
   {
     date: "2026-10",
@@ -18,7 +18,7 @@ export const news: NewsItem[] = [
   },
   {
     date: "2026-09",
-    text: "Our paper, Mitigating Sequential Reappearance in Diffusion Data-Point Unlearning, coauthored with TML students at Konkuk University, is now available on arXiv. It studies how to prevent deleted instances from reappearing across sequential unlearning requests."
+    text: "Our paper, Mitigating Sequential Reappearance in Diffusion Data-Point Unlearning, coauthored with TML students at Konkuk University, is now available on arXiv."
   },
   {
     date: "2026-09",
@@ -26,7 +26,7 @@ export const news: NewsItem[] = [
   },
   {
     date: "2026-08",
-    text: "Our paper, Mechanistic Circuit Identification for Controllable Data Generation, is now available on arXiv. It analyzes and steers model-internal circuits to improve the quality and controllability of LLM-generated training data."
+    text: "Our paper, Mechanistic Circuit Identification for Controllable Data Generation, is now available on arXiv."
   },
   {
     date: "2026-08",
