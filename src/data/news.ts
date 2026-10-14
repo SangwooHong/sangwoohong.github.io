@@ -10,7 +10,15 @@ export const news: NewsItem[] = [
   },
   {
     date: "2026-10",
+    text: "Our paper, Rethinking Memorization Mitigation in Diffusion Models: Reinforcing Text Conditioning, is now available on arXiv."
+  },
+  {
+    date: "2026-10",
     text: "TML joined Jeju National University for the AI Star Fellowship project workshop at Camphortree Hotel, Jeju, from October 1–3, 2026."
+  },
+  {
+    date: "2026-09",
+    text: "Our paper, Continual Data Unlearning in Diffusion Models via Transition-based Regularization, is now available on arXiv."
   },
   {
     date: "2026-09",

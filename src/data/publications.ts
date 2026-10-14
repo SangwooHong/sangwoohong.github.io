@@ -51,6 +51,38 @@ export const publications: Publication[] = [
     representativeFor: ["Foundation Models"]
   },
   {
+    id: "rethinking-memorization-mitigation",
+    title: "Rethinking Memorization Mitigation in Diffusion Models: Reinforcing Text Conditioning",
+    authors: "Hyungjun Joo, Sehwan Kim, Hyeonggeun Han, Sangwoo Hong, Jungwoo Lee",
+    venue: "arXiv preprint",
+    year: 2026,
+    layer: "Foundation Models",
+    algorithmTags: ["Privacy"],
+    venueShort: "arXiv",
+    image: "/assets/img/publications/rethinking-memorization-mitigation.png",
+    links: {
+      paper: "https://arxiv.org/abs/2610.01723"
+    },
+    summary: "Introduces a training-free cross-attention intervention that reinforces text conditioning to reduce training-image reproduction while preserving prompt alignment.",
+    note: "Preprint"
+  },
+  {
+    id: "continual-data-unlearning",
+    title: "Continual Data Unlearning in Diffusion Models via Transition-based Regularization",
+    authors: "Sunbeom Jeong, Sehwan Kim, Sangwoo Hong, Jungwoo Lee",
+    venue: "arXiv preprint",
+    year: 2026,
+    layer: "Foundation Models",
+    algorithmTags: ["Unlearning"],
+    venueShort: "arXiv",
+    image: "/assets/img/publications/continual-data-unlearning.png",
+    links: {
+      paper: "https://arxiv.org/abs/2609.32328"
+    },
+    summary: "Introduces transition-based regularization that prevents later deletion updates from reversing earlier unlearning while preserving generative utility.",
+    note: "Preprint"
+  },
+  {
     id: "mitigating-sequential-reappearance",
     title: "Mitigating Sequential Reappearance in Diffusion Data-Point Unlearning",
     authors: "Donghyun Kim, Taehyuk Lee, Jinyeong Kim, Youngmin Oh, Dohyeong Kim, Jaehyuk Ryu, Sangwoo Hong",
