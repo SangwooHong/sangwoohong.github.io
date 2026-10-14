@@ -34,6 +34,23 @@ export interface Publication {
 
 export const publications: Publication[] = [
   {
+    id: "claim-admission-visual-hallucination",
+    title: "From Token Correction to Claim Admission: Training-Free Hallucination Mitigation for Large Vision-Language Models",
+    authors: "Hyeonggeun Han, Taehyun Cho, Sangwoo Hong",
+    venue: "arXiv preprint",
+    year: 2026,
+    layer: "Foundation Models",
+    algorithmTags: ["Robustness"],
+    venueShort: "arXiv",
+    image: "/assets/img/current-research/visual-hallucination-vision-language-models.png",
+    links: {
+      paper: "https://arxiv.org/abs/2610.17706"
+    },
+    summary: "Introduces Evidence-Guided Visual Claim Admission, a training-free method that accepts generated claims only when they receive sufficient image-dependent support, reducing visual hallucination while preserving caption quality.",
+    note: "Preprint",
+    representativeFor: ["Foundation Models"]
+  },
+  {
     id: "mitigating-sequential-reappearance",
     title: "Mitigating Sequential Reappearance in Diffusion Data-Point Unlearning",
     authors: "Donghyun Kim, Taehyuk Lee, Jinyeong Kim, Youngmin Oh, Dohyeong Kim, Jaehyuk Ryu, Sangwoo Hong",

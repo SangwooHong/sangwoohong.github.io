@@ -6,6 +6,10 @@ export interface NewsItem {
 export const news: NewsItem[] = [
   {
     date: "2026-10",
+    text: "Our paper, From Token Correction to Claim Admission: Training-Free Hallucination Mitigation for Large Vision-Language Models, is now available on arXiv. It introduces evidence-guided claim admission to reduce visual hallucination without additional training."
+  },
+  {
+    date: "2026-10",
     text: "TML joined Jeju National University for the AI Star Fellowship project workshop at Camphortree Hotel, Jeju, from October 1–3, 2026."
   },
   {
