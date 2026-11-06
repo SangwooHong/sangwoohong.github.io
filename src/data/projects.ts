@@ -74,6 +74,7 @@ export const projects: Project[] = [
     agency: "National Research Foundation of Korea, Outstanding Early-Career Researcher Seed Grant",
     startDate: "2025-09-01",
     endDate: "2026-08-31",
+    statusOverride: "Completed",
     themes: ["Reliable Computing", "Quantum Computing", "Tensor Contraction"],
     description:
       "Robust and efficient quantum circuit simulation through coded operation-based tensor contraction."
