@@ -23,9 +23,10 @@ export const projects: Project[] = [
     agency: "KETI, Korea Electronics Technology Institute",
     startDate: "2026-11-20",
     endDate: "2027-03-20",
+    statusOverride: "Ongoing",
     themes: ["Infrastructure", "Foundation Models", "GPU Computing"],
     description:
-      "Confirmed research computing support with access to eight NVIDIA B200 GPUs for AI research workloads."
+      "Active research computing support with access to eight NVIDIA B200 GPUs for AI research workloads."
   },
   {
     title: "AI Star Fellowship: Deepfake Defense and Agent Authentication",
