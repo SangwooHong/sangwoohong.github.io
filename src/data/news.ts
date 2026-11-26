@@ -5,6 +5,10 @@ export interface NewsItem {
 
 export const news: NewsItem[] = [
   {
+    date: "2026-11",
+    text: "Prof. Hong will serve as an Area Chair for ICML 2027."
+  },
+  {
     date: "2026-10",
     text: "Our paper, From Token Correction to Claim Admission: Training-Free Hallucination Mitigation for Large Vision-Language Models, is now available on arXiv."
   },
